@@ -14,6 +14,7 @@ import users.entity.UsersEntity;
 @Builder
 @Table(name = "locations")
 public class LocationsEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

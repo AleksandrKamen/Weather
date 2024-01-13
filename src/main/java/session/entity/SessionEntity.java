@@ -1,4 +1,4 @@
-package session;
+package session.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
