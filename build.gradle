@@ -1,6 +1,7 @@
 plugins {
   id 'java'
   id 'war'
+  id 'jacoco'
 }
 
 group 'com.galaxy'
@@ -11,7 +12,12 @@ repositories {
 }
 
 ext {
-  junitVersion = '5.9.2'
+  junitVersion = '5.10.1'
+  hibernateVersion = '6.4.0.Final'
+  lombokVersion = 'lombok:1.18.30'
+}
+war {
+  duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -20,10 +26,23 @@ tasks.withType(JavaCompile).configureEach {
 
 dependencies {
   compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
+  compileOnly "org.projectlombok:${lombokVersion}"
+  implementation "org.hibernate:hibernate-core:${hibernateVersion}"
+  implementation 'org.postgresql:postgresql:42.7.1'
 
+  annotationProcessor "org.projectlombok:${lombokVersion}"
+
+  testCompileOnly "org.projectlombok:${lombokVersion}"
+  testAnnotationProcessor "org.projectlombok:${lombokVersion}"
+  testImplementation 'org.assertj:assertj-core:3.24.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.0'
+  testImplementation 'org.mockito:mockito-core:5.8.0'
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 test {
 useJUnitPlatform()}
+
+test.finalizedBy jacocoTestReport
+jacocoTestReport.dependsOn test
