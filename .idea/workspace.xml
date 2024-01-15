@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added UserDto, Mapper and Validator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/locations/dto/LocationsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added LocationsDto and CreateUserValidator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/filter/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/mapper/ReadUserMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +46,8 @@
       <list>
         <option value="HTTP Request" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -64,11 +71,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project/src/main/java",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,17 +104,72 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="users.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="servlets" />
       <recent name="util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Weather_project.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;users.service.UserServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.CorrectUserDto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;users.service.UserServiceTest.CorrectUserDto&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Weather_project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -136,12 +201,29 @@
           </settings>
         </artifact>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="153cb343-8a27-42ce-a719-33a0a3c265e0" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -151,6 +233,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserServiceTest" />
+        <item itemvalue="Gradle.UserServiceTest.CorrectUserDto" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Weather_project [build]" />
       </list>
@@ -167,7 +251,8 @@
       <workItem from="1705146862900" duration="4234000" />
       <workItem from="1705162687073" duration="6000000" />
       <workItem from="1705235292942" duration="623000" />
-      <workItem from="1705300790971" duration="4524000" />
+      <workItem from="1705300790971" duration="4608000" />
+      <workItem from="1705316420491" duration="4609000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -233,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705301970580</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added LocationsDto and CreateUserValidator">
+      <option name="closed" value="true" />
+      <created>1705305369733</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705305369733</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +351,8 @@
     <MESSAGE value="added Entity classes" />
     <MESSAGE value="added dependencies slf4j, jackson, jbcrypt, and repository" />
     <MESSAGE value="added UserDto, Mapper and Validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added UserDto, Mapper and Validator" />
+    <MESSAGE value="added LocationsDto and CreateUserValidator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added LocationsDto and CreateUserValidator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

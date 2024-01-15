@@ -1,10 +1,5 @@
 package users.repository;
 
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-import org.hibernate.query.criteria.HibernateCriteriaBuilder;
-import org.hibernate.query.criteria.JpaCriteriaQuery;
-import org.hibernate.query.criteria.JpaRoot;
 import users.entity.UsersEntity;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
@@ -19,9 +14,9 @@ public class UserRepository extends BaseRepository<UsersEntity> {
            session.beginTransaction();
            var query = session.createQuery("select u from UsersEntity u where u.login = :login", UsersEntity.class);
            query.setParameter("login", login);
-           var singleResult = query.getSingleResult();
+           var mabyUser = query.getSingleResultOrNull();
            session.getTransaction().commit();
-           return Optional.ofNullable(singleResult);
+           return Optional.ofNullable(mabyUser);
          }
     }
 }

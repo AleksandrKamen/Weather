@@ -7,7 +7,7 @@ import validator.ValidationResult;
 import validator.Validator;
 
 public class CreateUserValidator implements Validator<UserDto> {
-    UserRepository userRepository = new UserRepository();
+    private final UserRepository userRepository = new UserRepository();
 
     @Override
     public ValidationResult isValid(UserDto object) {
@@ -27,15 +27,18 @@ public class CreateUserValidator implements Validator<UserDto> {
             if (object.getLogin().replaceAll("[0-9]", "").equals(object.getLogin())) {
                 validationResult.add(Error.of(400, "В Логине отсутствуют цифры"));
             }
-            if (object.getPassword().replaceAll("[a-zA-Z\\d]", "").length() != 0) {
-                validationResult.add(Error.of(400, "В пароле присутствуют спец символы"));
+            if (object.getLogin().toLowerCase().equals(object.getLogin())) {
+                validationResult.add(Error.of(400, "В Логине отсутствуют заглавные буквы"));
             }
-        }
-
-        if (userRepository.findByLogin(object.getLogin()).isPresent()) {
+            if (object.getLogin().toUpperCase().equals(object.getLogin())) {
+                validationResult.add(Error.of(400, "В Логине отсутствуют прописные буквы"));
+            }
+            if (object.getLogin().replaceAll("[a-zA-Z\\d]", "").length() == 0) {
+                validationResult.add(Error.of(400, "В Логине отсутствуют спец символы"));
+            }
+        } else if(userRepository.findByLogin(object.getLogin()).isPresent()) {
             validationResult.add(Error.of(400, "Пользователь с данным логином уже существует"));
         }
-
 
         //password
         if (!object.getPassword().matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d)(?=.*[@#$%^&+=])(?!.*\\\\s).{6,30}$")) {
@@ -60,12 +63,12 @@ public class CreateUserValidator implements Validator<UserDto> {
             if (object.getPassword().replaceAll("\\d", "").equals(object.getPassword())) {
                 validationResult.add(Error.of(400, "В пароле отсутствуют цифры"));
             }
-            if (object.getPassword().replaceAll("[@#$%^&+=]", "").equals(object.getPassword())) {
+            if (object.getPassword().replaceAll("[a-zA-Z\\d]", "").length() != 0) {
                 validationResult.add(Error.of(400, "В пароле отсутствуют спец символы"));
             }
-        }
-        if (object.getPassword().equals(object.getLogin())) {
-            validationResult.add(Error.of(400, "Пароль не может совпадать с логином"));
+            if (object.getPassword().equals(object.getLogin())) {
+                validationResult.add(Error.of(400, "Пароль не может совпадать с логином"));
+            }
         }
 
         return validationResult;
