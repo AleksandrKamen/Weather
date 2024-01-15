@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added dependencies slf4j, jackson, jbcrypt, and repository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/users/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/users/mapper/CreateUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/users/mapper/ReadUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/mapper/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/ValidationResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/ValidationException.java" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added UserDto, Mapper and Validator">
+      <change afterPath="$PROJECT_DIR$/src/main/java/locations/dto/LocationsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
@@ -94,6 +88,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -172,7 +167,7 @@
       <workItem from="1705146862900" duration="4234000" />
       <workItem from="1705162687073" duration="6000000" />
       <workItem from="1705235292942" duration="623000" />
-      <workItem from="1705300790971" duration="980000" />
+      <workItem from="1705300790971" duration="4524000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -230,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705167464838</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added UserDto, Mapper and Validator">
+      <option name="closed" value="true" />
+      <created>1705301970580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705301970580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +257,8 @@
     <MESSAGE value="added HibernateUtil" />
     <MESSAGE value="added Entity classes" />
     <MESSAGE value="added dependencies slf4j, jackson, jbcrypt, and repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dependencies slf4j, jackson, jbcrypt, and repository" />
+    <MESSAGE value="added UserDto, Mapper and Validator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added UserDto, Mapper and Validator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
