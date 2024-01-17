@@ -22,6 +22,6 @@ public class LocationsEntity {
     @ManyToOne
     @JoinColumn(name = "userid")
     private UsersEntity user;
-    private Long latitude;
-    private Long longitude;
+    private Double latitude;
+    private Double longitude;
 }

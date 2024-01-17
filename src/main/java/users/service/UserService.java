@@ -21,4 +21,5 @@ public class UserService {
          var save = userRepository.save(usersEntity);
          return save;
      }
+
 }

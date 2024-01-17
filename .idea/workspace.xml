@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added LocationsDto and CreateUserValidator">
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/filter/CharsetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added CharsetFilter, UserServiceTest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Weather/WeatherEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/authorization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/authorization.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/mapper/ReadUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/filter/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CharsetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +53,7 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -59,6 +65,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -78,7 +91,8 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/JDBC_DMDEV",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,8 +112,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
@@ -111,11 +125,11 @@
       <recent name="users.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="servlets" />
       <recent name="util" />
+      <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Weather_project.main" />
@@ -193,6 +207,9 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/test.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="Gradle : com.galaxy : Weather_project-1.0-SNAPSHOT.war">
@@ -233,6 +250,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.test | #1" />
         <item itemvalue="Gradle.UserServiceTest" />
         <item itemvalue="Gradle.UserServiceTest.CorrectUserDto" />
         <item itemvalue="Application.Main" />
@@ -252,7 +270,13 @@
       <workItem from="1705162687073" duration="6000000" />
       <workItem from="1705235292942" duration="623000" />
       <workItem from="1705300790971" duration="4608000" />
-      <workItem from="1705316420491" duration="4609000" />
+      <workItem from="1705316420491" duration="6850000" />
+      <workItem from="1705323386251" duration="198000" />
+      <workItem from="1705334307575" duration="7084000" />
+      <workItem from="1705396400811" duration="3205000" />
+      <workItem from="1705402401165" duration="913000" />
+      <workItem from="1705406688992" duration="1862000" />
+      <workItem from="1705473027591" duration="3204000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -326,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705305369733</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added CharsetFilter, UserServiceTest">
+      <option name="closed" value="true" />
+      <created>1705321243149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705321243149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +384,8 @@
     <MESSAGE value="added dependencies slf4j, jackson, jbcrypt, and repository" />
     <MESSAGE value="added UserDto, Mapper and Validator" />
     <MESSAGE value="added LocationsDto and CreateUserValidator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added LocationsDto and CreateUserValidator" />
+    <MESSAGE value="added CharsetFilter, UserServiceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CharsetFilter, UserServiceTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
