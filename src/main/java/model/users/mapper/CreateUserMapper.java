@@ -1,8 +1,8 @@
-package users.mapper;
+package model.users.mapper;
 
+import model.users.dto.UserDto;
 import org.mindrot.jbcrypt.BCrypt;
-import users.dto.UserDto;
-import users.entity.UsersEntity;
+import model.users.entity.UsersEntity;
 import util.mapper.Mapper;
 
 public class CreateUserMapper implements Mapper<UserDto, UsersEntity> {

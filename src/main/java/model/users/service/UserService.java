@@ -1,9 +1,9 @@
-package users.service;
+package model.users.service;
 
-import users.dto.UserDto;
-import users.entity.UsersEntity;
-import users.mapper.CreateUserMapper;
-import users.repository.UserRepository;
+import model.users.dto.UserDto;
+import model.users.entity.UsersEntity;
+import model.users.mapper.CreateUserMapper;
+import model.users.repository.UserRepository;
 import validator.exception.ValidationException;
 import validator.user.CreateUserValidator;
 

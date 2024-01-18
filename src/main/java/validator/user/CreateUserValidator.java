@@ -1,7 +1,7 @@
 package validator.user;
 
-import users.dto.UserDto;
-import users.repository.UserRepository;
+import model.users.dto.UserDto;
+import model.users.repository.UserRepository;
 import validator.Error;
 import validator.ValidationResult;
 import validator.Validator;
@@ -36,9 +36,10 @@ public class CreateUserValidator implements Validator<UserDto> {
             if (object.getLogin().replaceAll("[a-zA-Z\\d]", "").length() == 0) {
                 validationResult.add(Error.of(400, "В Логине отсутствуют спец символы"));
             }
-        } else if(userRepository.findByLogin(object.getLogin()).isPresent()) {
-            validationResult.add(Error.of(400, "Пользователь с данным логином уже существует"));
         }
+//        else if(userRepository.findByLogin(object.getLogin()).isPresent()) {
+//            validationResult.add(Error.of(400, "Пользователь с данным логином уже существует"));
+//        }
 
         //password
         if (!object.getPassword().matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d)(?=.*[@#$%^&+=])(?!.*\\\\s).{6,30}$")) {

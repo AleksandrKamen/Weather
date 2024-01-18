@@ -1,4 +1,4 @@
-package users.dto;
+package model.users.dto;
 
 import lombok.Builder;
 import lombok.Value;

@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import util.HibernateUtil;
 import java.util.Optional;
 @RequiredArgsConstructor
-public class BaseRepository <T> implements Repository<T>{
+public class BaseRepository <T, K> implements Repository<T,K>{
 
     private final Class<T> clazz;
     @Override
@@ -29,10 +29,11 @@ public class BaseRepository <T> implements Repository<T>{
 
 
     @Override
-    public Optional<T> findById(Long id) {
+    public Optional<T> findById(K id) {
         try (var session = HibernateUtil.getSession()) {
             session.beginTransaction();
             var mabyObject = session.get(clazz, id);
+            session.getTransaction().commit();
             return Optional.ofNullable(mabyObject);
         }
     }
@@ -40,14 +41,19 @@ public class BaseRepository <T> implements Repository<T>{
     @Override
     public void update(T entity) {
         try (var session = HibernateUtil.getSession()) {
+            session.beginTransaction();
             session.merge(entity);
+            session.getTransaction().commit();
         }
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(K id) {
         try (var session = HibernateUtil.getSession()) {
-            session.remove(id);
+            session.beginTransaction();
+            var entity = session.get(clazz, id);
+            session.remove(entity);
+            session.getTransaction().commit();
         }
     }
 }

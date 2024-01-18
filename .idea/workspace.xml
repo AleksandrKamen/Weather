@@ -4,22 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added CharsetFilter, UserServiceTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Weather/WeatherEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/authorization.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/authorization.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/filter/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/CharsetFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locations/repository/LocationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/session/repository/SessionsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/entity/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/mapper/CreateUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/mapper/CreateUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +97,12 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/JDBC_DMDEV",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -101,7 +112,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.1976378",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -276,7 +287,14 @@
       <workItem from="1705396400811" duration="3205000" />
       <workItem from="1705402401165" duration="913000" />
       <workItem from="1705406688992" duration="1862000" />
-      <workItem from="1705473027591" duration="3204000" />
+      <workItem from="1705473027591" duration="4586000" />
+      <workItem from="1705489171270" duration="5462000" />
+      <workItem from="1705498231475" duration="3217000" />
+      <workItem from="1705501523850" duration="52000" />
+      <workItem from="1705564151902" duration="5741000" />
+      <workItem from="1705570555247" duration="1568000" />
+      <workItem from="1705576864598" duration="7486000" />
+      <workItem from="1705584717753" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -358,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705321243149</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml">
+      <option name="closed" value="true" />
+      <created>1705476470327</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705476470328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +411,8 @@
     <MESSAGE value="added UserDto, Mapper and Validator" />
     <MESSAGE value="added LocationsDto and CreateUserValidator" />
     <MESSAGE value="added CharsetFilter, UserServiceTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CharsetFilter, UserServiceTest" />
+    <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
