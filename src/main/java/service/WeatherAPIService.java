@@ -28,7 +28,8 @@ public class WeatherAPIService {
 
     public WeatherDto getWeatherForLocation(LocationsDto locationsDto) throws IOException {
 
-        var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, DATA_KEY, LATITUDE_KEY)) + locationsDto.getLatitude() + LONGITUDE_KEY + locationsDto.getLongitude()
+        var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, DATA_KEY, LATITUDE_KEY))
+                + locationsDto.getLatitude() + LONGITUDE_KEY + locationsDto.getLongitude()
                 + PropertiesUtil.get(List.of(APPID_KEY, UNITS_KEY)));
         var execute = closeableHttpClient.execute(httpGet);
         if (execute.getStatusLine().getStatusCode() != 200) {

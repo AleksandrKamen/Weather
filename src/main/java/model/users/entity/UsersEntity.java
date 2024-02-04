@@ -4,19 +4,16 @@ import jakarta.persistence.*;
 import lombok.*;
 import model.locations.entity.LocationsEntity;
 import model.session.entity.SessionEntity;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Builder
 @ToString(exclude = {"locations","sessions"})
-@EqualsAndHashCode(exclude = {"locations","sessions"})
 @Table(name = "users")
 public class UsersEntity {
     @Id
@@ -37,4 +34,9 @@ public class UsersEntity {
         sessions.add(session);
         session.setUser(this);
     }
+    public void addLocation(LocationsEntity location){
+        locations.add(location);
+        location.setUser(this);
+    }
+
 }
