@@ -4,32 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/authorization.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/authorization.css" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added ThymeleafListener and ThymeleafUtil">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/locations/mapper/LocationsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/LocationsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/LogOutServler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/home_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/search_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/locations/repository/LocationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/session/repository/SessionsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/entity/UsersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/mapper/CreateUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/mapper/CreateUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/users/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/users/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +64,8 @@
         <option value="HTTP Request" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -102,7 +104,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project/src/main/webapp/static/css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -111,7 +113,7 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.1976378",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.31932774",
     "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   },
@@ -123,11 +125,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\css" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources\static" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF\templates" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -140,7 +148,7 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Weather_project.main" />
@@ -222,10 +230,12 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="Gradle : com.galaxy : Weather_project-1.0-SNAPSHOT.war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___com_galaxy___Weather_project_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -237,6 +247,54 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57685" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -259,6 +317,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.UserServiceTest" />
+      <item itemvalue="Gradle.UserServiceTest.CorrectUserDto" />
+      <item itemvalue="Gradle.Weather_project [build]" />
+      <item itemvalue="HTTP Request.test | #1" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.test | #1" />
@@ -295,6 +361,16 @@
       <workItem from="1705570555247" duration="1568000" />
       <workItem from="1705576864598" duration="7486000" />
       <workItem from="1705584717753" duration="648000" />
+      <workItem from="1705593877004" duration="2914000" />
+      <workItem from="1705646732441" duration="8358000" />
+      <workItem from="1705663587206" duration="1422000" />
+      <workItem from="1705672010999" duration="361000" />
+      <workItem from="1707032797585" duration="14000" />
+      <workItem from="1707032892509" duration="7904000" />
+      <workItem from="1707064411481" duration="5517000" />
+      <workItem from="1707070314498" duration="456000" />
+      <workItem from="1707118900255" duration="4983000" />
+      <workItem from="1707131688172" duration="1659000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -384,7 +460,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705476470328</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added RegistrationService">
+      <option name="closed" value="true" />
+      <created>1705594028874</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705594028874</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added ThymeleafListener and ThymeleafUtil">
+      <option name="closed" value="true" />
+      <created>1707039043190</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707039043190</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +504,9 @@
     <MESSAGE value="added LocationsDto and CreateUserValidator" />
     <MESSAGE value="added CharsetFilter, UserServiceTest" />
     <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
+    <MESSAGE value="added RegistrationService" />
+    <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ThymeleafListener and ThymeleafUtil" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

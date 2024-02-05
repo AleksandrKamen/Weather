@@ -7,4 +7,5 @@ public class LocationsRepository extends BaseRepository<LocationsEntity,Long> {
     public LocationsRepository() {
         super(LocationsEntity.class);
     }
+
 }

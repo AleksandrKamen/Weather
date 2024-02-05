@@ -1,10 +1,7 @@
 package model.session.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import model.users.entity.UsersEntity;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -13,7 +10,8 @@ import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Builder
 @Table(name = "sessions")

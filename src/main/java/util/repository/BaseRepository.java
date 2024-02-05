@@ -26,8 +26,6 @@ public class BaseRepository <T, K> implements Repository<T,K>{
         }
         return entity;
     }
-
-
     @Override
     public Optional<T> findById(K id) {
         try (var session = HibernateUtil.getSession()) {

@@ -1,4 +1,4 @@
-package servlets;
+package servlets.filters;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;

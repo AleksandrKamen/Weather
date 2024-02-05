@@ -32,11 +32,12 @@ public class ThymeleafUtil {
     }
 
     public ITemplateResolver buildTemplateResolver (IWebApplication webApplication){ // Создаем объект Resolver, ITemplateResolver - это обстракция для всех Resolver, IWebApplication - абстракция для веб приложения
-        var templateResolver = new WebApplicationTemplateResolver(webApplication);  //
+        var templateResolver = new WebApplicationTemplateResolver(webApplication);  // создание нашего WebApplicationTemplateResolver на основе webApplication
         templateResolver.setTemplateMode(TemplateMode.HTML); // Устанвливаем модификацию
-        templateResolver.setPrefix("/WEB-INF/templates/");  // Устанавливаем путь к шаблонам
-        templateResolver.setSuffix(".html"); //  устанавливаем префикс
-        templateResolver.setCacheTTLMs(3600000L); // Установка времени нахождения в кэш
+        templateResolver.setPrefix("/templates/");  // Устанавливаем путь к шаблонам
+        templateResolver.setSuffix(".html"); //  устанавливаем суффикс
+//        templateResolver.setCacheTTLMs(3600000L); // Установка времени нахождения в кэш
+        templateResolver.setCharacterEncoding("UTF-8"); // Устанавливаем корректировку
         return templateResolver;                 // возвращаем созданный объект
     }
 
