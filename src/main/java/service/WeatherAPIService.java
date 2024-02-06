@@ -26,10 +26,10 @@ public class WeatherAPIService {
     private final CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public WeatherDto getWeatherForLocation(LocationsDto locationsDto) throws IOException {
+    public WeatherDto getWeatherForLocation(LocationsDto locationsDto) throws IOException { // Поиск локции по координатам
 
         var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, DATA_KEY, LATITUDE_KEY))
-                + locationsDto.getLatitude() + LONGITUDE_KEY + locationsDto.getLongitude()
+                + locationsDto.getLatitude() + PropertiesUtil.get(LONGITUDE_KEY) + locationsDto.getLongitude()
                 + PropertiesUtil.get(List.of(APPID_KEY, UNITS_KEY)));
         var execute = closeableHttpClient.execute(httpGet);
         if (execute.getStatusLine().getStatusCode() != 200) {
@@ -39,7 +39,7 @@ public class WeatherAPIService {
         return objectMapper.readValue(string, WeatherDto.class);
     }
 
-    public List<LocationsDto> getLocationsByName(String name) throws IOException {
+    public List<LocationsDto> getLocationsByName(String name) throws IOException { // Поиск локаций по названию
         var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, GEO_KEY, Q_KEY)) + name
                 + PropertiesUtil.get(List.of(LIMIT_KEY, APPID_KEY)));
         var execute = closeableHttpClient.execute(httpGet);
