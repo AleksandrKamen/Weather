@@ -36,7 +36,7 @@ public class ThymeleafUtil {
         templateResolver.setTemplateMode(TemplateMode.HTML); // Устанвливаем модификацию
         templateResolver.setPrefix("/templates/");  // Устанавливаем путь к шаблонам
         templateResolver.setSuffix(".html"); //  устанавливаем суффикс
-//        templateResolver.setCacheTTLMs(3600000L); // Установка времени нахождения в кэш
+        templateResolver.setCacheTTLMs(0L); // Установка времени нахождения в кэш
         templateResolver.setCharacterEncoding("UTF-8"); // Устанавливаем корректировку
         return templateResolver;                 // возвращаем созданный объект
     }

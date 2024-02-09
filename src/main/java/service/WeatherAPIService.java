@@ -47,7 +47,27 @@ public class WeatherAPIService {
             throw new NullPointerException();
         }
         var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
-        return objectMapper.readValue(string, new TypeReference<List<LocationsDto>>() {});
+        return objectMapper.readValue(string, new TypeReference<List<LocationsDto>>() {
+        });
 
+    }
+
+    public String getWindDirection(WeatherDto weatherDto) {
+        var deg = Double.valueOf(weatherDto.getWind().get("deg").toString());
+        if (deg >= 0 && deg < 45) {
+            return "северный";
+        } else if (deg >= 45 && deg < 90) {
+            return "северо-восточный";
+        } else if (deg >= 90 && deg < 135) {
+            return "восточный";
+        } else if (deg >= 135 && deg < 180) {
+            return "юго-восточный";
+        } else if (deg >= 180 && deg < 225) {
+            return "южный";
+        } else if (deg >= 225 && deg < 270) {
+            return "юго-западный";
+        } else if (deg >= 270 && deg < 315) {
+            return "западный";
+        } else return "северо-западный";
     }
 }
