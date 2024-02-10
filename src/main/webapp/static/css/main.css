@@ -8,7 +8,17 @@ body{
     color: #000;
     background-color: #fff;
     min-width: 320px;
+    display: flex;            /*делает контейнер гибким*/
+    flex-direction: column; /*устанавливает направление оси - вертикальной*/
+    min-height: 100vh;     /*устанавливает минимальную высоту контейнера равной 100%*/
+    margin: 0;            /*Убирает отступы в браузере*/
 }
+
+.main-content{ /*Главный контент */
+    flex: 1;
+    min-height: 70vh;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -58,21 +68,21 @@ a:hover{
 /*Header*/
 
 
-/*Product-card*/
+/*Location-card*/
 
-.product-card{
+.location-card{
     box-shadow:  0 2px 5px 0 rgba(0,0,0,0.100);
     transition: all .3s;
 }
-.product-card:hover{
+.location-card:hover{
     box-shadow:  0 14px 30px -15px rgba(0,0,0,0.75);
 }
-.product-bottom-details{
+.location-bottom-details{
     color: #999;
     font-size: 15px;
     margin-top: 20px;
 }
-/*Product-card*/
+/*Location-card*/
 
 /*Footer*/
 .footer{
@@ -112,3 +122,34 @@ a:hover{
 /*Footer*/
 
 
+/*popup*/
+.popup-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-close{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+/*popup*/
