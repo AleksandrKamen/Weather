@@ -1,0 +1,45 @@
+<body>
+ <div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Погода</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul th:if="${userLogin} == null" class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration">Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login">Авторизация</a>
+                    </li>
+                </ul>
+
+                <form th:if="${userLogin}" action="/" method="post" enctype="application/x-www-form-urlencoded"
+                      class="d-flex mx-auto" role="search">
+                    <input class="form-control me-2" type="search" name="locationName" id="locationName"
+                           placeholder="Moscow" maxlength="20" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Поиск</button>
+                </form>
+                <ul th:if="${userLogin}" class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="tooltip" th:title="${userLogin}">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="logOut" method="post" enctype="application/x-www-form-urlencoded"
+                              class="nav-link">
+                            <button type="submit" class="icon-button" data-toggle="tooltip" title="Выход"><i
+                                    class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ </div>
+</body>
