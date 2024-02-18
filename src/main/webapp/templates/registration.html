@@ -28,14 +28,14 @@
                         <label for="login" class="form-label">Имя пользователя</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                            <input type="text" class="form-control" id="login" name="login" placeholder="Enter your login" required>
+                            <input type="text" class="form-control" id="login" name="login" placeholder="Enter your login" minlength="3" maxlength="20"  required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Пароль</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" minlength="3" maxlength="10" required>
                             <button class="btn btn-outline-secondary toggle-password" type="button" id="togglePassword">Показать</button>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                         <label for="confirmPassword" class="form-label">Подтвердите пароль</label>
                         <div class="input-group">
                         <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" minlength="3" maxlength="10" required>
                         <button class="btn btn-outline-secondary toggle-password" type="button" id="toggleconfirmPassword">Показать</button>
                         </div>
                     </div>
@@ -52,10 +52,13 @@
                         <input type="checkbox" class="form-check-input" id="terms-and-conditions" required>
                         <label class="form-check-label" for="terms-and-conditions">Я не робот</label>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="disableButton(this)">Отправить</button>
+                    <button type="submit" class="btn btn-primary" onclick="disableButton(this)">Зарегистрироваться</button>
                 </form>
             </div>
         </div>
+    </div>
+    <div th:each="error : ${errors}" class="errors d-flex align-items-center justify-content-center">
+        <p th:text="${error.getMessage()}"></p>
     </div>
 </section>
 

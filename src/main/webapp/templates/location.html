@@ -24,46 +24,77 @@
 
 <!--Card-->
 <section class="main-content">
-    <div class="card w-25 p-3 mx-auto my-5 h-70">
-        <img th:src="@{'https://openweathermap.org/img/wn/' + ${weather.getWeather()[0].get('icon')} + '@2x.png'}"
-             class="card-img-top w-25 h-auto" alt="Иконка погоды">
-        <div class="card-body mb-2">
-            <h4 class="card-title text-center mb-5" th:text="${location.name}"></h4>
+    <div class="container ">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 .col-sm-6 mb-3">
+                <div class="location-card">
+                    <img th:src="@{'https://openweathermap.org/img/wn/' + ${weather.getWeather()[0].get('icon')} + '@2x.png'}"
+                         class="card-img-top w-25 h-auto" alt="Иконка погоды">
+                    <div class="location-card-body">
+                        <h4 class="card-title text-center mb-5" th:text="${location.name}"></h4>
+                        <div class="location-bottom-details">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Температура воздуха: ' +  ${weather.getMain().get('temp')} + ' °C'"></span>
+                                <a><i class="fa-solid fa-temperature-three-quarters"></i></a>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'По ощущению: ' +  ${weather.getMain().get('feels_like')} + ' °C'"></span>
+                                <a><i class="fa-solid fa-person"></i></a>
+                            </div>
 
-            <div class="d-flex align-items-center mb-4">
-                <span class="me-2" th:text="'Температура воздуха: ' +  ${weather.getMain().get('temp')} + ' °C'"></span>
-                <a><i class="fa-solid fa-temperature-three-quarters"></i></a>
-            </div>
-            <div class="d-flex align-items-center mb-4">
-                <span class="me-2" th:text="'По ощущению: ' +  ${weather.getMain().get('feels_like')} + ' °C'"></span>
-                <a><i class="fa-solid fa-person"></i></a>
-            </div>
-            <div class="d-flex align-items-center mb-4">
-                <span class="me-2" th:text="'Описание: ' + ${weather.getWeather()[0].get('description')}"></span>
-                <a><i class="fa-solid fa-book-open"></i></a>
-            </div>
-            <div class="d-flex align-items-center mb-4">
-                <span class="me-2" th:text="'Влажность: ' + ${weather.getMain().get('humidity')} + '%'"></span>
-                <a><i class="fa-solid fa-droplet"></i></a>
-            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Минимальная температура: ' +  ${weather.getMain().get('temp_min')} + ' °C'"></span>
+                                <a><i class="fa-solid fa-snowflake"></i></a>
+                            </div>
 
-            <div class="d-flex align-items-center mb-4">
-                <span class="me-2" th:text="'Давление: ' + ${weather.getMain().get('pressure')} + ' гПа'"></span>
-                <a><i class="fa-solid fa-weight-hanging"></i></a>
-            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Максимальная температура: ' +  ${weather.getMain().get('temp_max')} + ' °C'"></span>
+                                <a><i class="fa-solid fa-fire"></i></a>
+                            </div>
 
-            <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Описание: ' + ${weather.getWeather()[0].get('description')}"></span>
+                                <a><i class="fa-solid fa-book-open"></i></a>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Влажность: ' + ${weather.getMain().get('humidity')} + '%'"></span>
+                                <a><i class="fa-solid fa-droplet"></i></a>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <span class="me-2"
+                                      th:text="'Давление: ' + ${weather.getMain().get('pressure')} + ' гПа'"></span>
+                                <a><i class="fa-solid fa-weight-hanging"></i></a>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
             <span class="me-2"
-                  th:text="'Ветер: ' + ${weather.getWind().get('speed')}+ ' м/с ' + ${windDirection}"></span>
-                <a><i class="fa-solid fa-wind"></i></a>
-            </div>
-            <div class="d-flex justify-content-center align-items-center mt-3">
-                <form action="location" method="post" enctype="application/x-www-form-urlencoded">
-                    <input type="hidden" name="locationName" th:value="${location.name}"/>
-                    <input type="hidden" name="locationlatitude" th:value="${location.latitude}"/>
-                    <input type="hidden" name="locationlongitude" th:value="${location.longitude}"/>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </form>
+                  th:text="'Ветер: ' + ${weather.getWind().get('speed')}+ ' м/с ' + ${weather.getWindDirection()}"></span>
+                                <a><i class="fa-solid fa-wind"></i></a>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+            <span class="me-2"
+                  th:text="'Порывы ветера до ' + ${weather.getWind().get('gust')}+ ' м/с '"></span>
+                                <a><i class="fa-solid fa-tornado"></i></a>
+                            </div>
+                        </div>
+                        <div class="location-card-button">
+                            <form action="location" method="post" enctype="application/x-www-form-urlencoded"
+                                  class="w-100">
+                                <input type="hidden" name="name" th:value="${location.name}"/>
+                                <input type="hidden" name="latitude" th:value="${location.latitude}"/>
+                                <input type="hidden" name="longitude" th:value="${location.longitude}"/>
+                                <button type="submit" class="btn btn-primary w-100">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

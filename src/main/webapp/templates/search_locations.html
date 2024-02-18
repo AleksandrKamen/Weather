@@ -25,25 +25,24 @@
         <div class="row">
             <div th:each="location : ${foundLocations}" class="col-lg-4 .col-sm-6 mb-3">
                 <div class="location-card">
-                    <div class="location-bottom-details">
+                    <div class="location-card-body">
                         <a th:href="'location?name='+${location.name} +'&latitude='+${location.latitude} + '&longitude=' + ${location.longitude}">
-                            <h4 th:text="${location.name}"></h4>
+                            <h4 class="card-title text-center" th:text="${location.name}"></h4>
                         </a>
-                        <div>
+                        <div class="location-bottom-details">
                             <p th:text="'Координаты: ' + ${location.latitude} +', '  + ${location.longitude}"></p>
                             <p th:text="'Страна: ' + ${location.country}"></p>
                             <p th:text="'Штат: ' + ${location.state}"></p>
-                            <div class="d-flex justify-content-center align-items-center mt-5">
-                                <form action="location" method="post" enctype="application/x-www-form-urlencoded">
-                                    <input type="hidden" name="locationName" th:value="${location.name}"/>
-                                    <input type="hidden" name="locationlatitude" th:value="${location.latitude}"/>
-                                    <input type="hidden" name="locationlongitude" th:value="${location.longitude}"/>
-                                    <button type="submit" class="btn btn-primary">Add</button>
-                                </form>
-                            </div>
                         </div>
                     </div>
-
+                    <div class="location-card-button">
+                        <form action="location" method="post" enctype="application/x-www-form-urlencoded" class="w-100">
+                            <input type="hidden" name="name" th:value="${location.name}"/>
+                            <input type="hidden" name="latitude" th:value="${location.latitude}"/>
+                            <input type="hidden" name="longitude" th:value="${location.longitude}"/>
+                            <button type="submit" class="btn btn-primary w-100">Add</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

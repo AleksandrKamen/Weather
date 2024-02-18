@@ -8,13 +8,13 @@ body{
     color: #000;
     background-color: #fff;
     min-width: 320px;
-    display: flex;            /*делает контейнер гибким*/
-    flex-direction: column; /*устанавливает направление оси - вертикальной*/
-    min-height: 100vh;     /*устанавливает минимальную высоту контейнера равной 100%*/
-    margin: 0;            /*Убирает отступы в браузере*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.main-content{ /*Главный контент */
+.main-content{
     flex: 1;
     min-height: 70vh;
 }
@@ -34,6 +34,7 @@ a{
 a:hover{
     color: #555;
 }
+
 /*Header*/
 .navbar-light .navbar-nav .nav-link{
     color: #111;
@@ -54,9 +55,6 @@ a:hover{
     transform: scale(1);
 }
 
-.modal-body img{
-    max-width: 100px;
-}
 .icon-button {
     background: none;
     border: none;
@@ -67,20 +65,35 @@ a:hover{
 }
 /*Header*/
 
-
 /*Location-card*/
-
 .location-card{
     box-shadow:  0 2px 5px 0 rgba(0,0,0,0.100);
     transition: all .3s;
+    min-height: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+.card-title{
+    text-align: center;
 }
 .location-card:hover{
     box-shadow:  0 14px 30px -15px rgba(0,0,0,0.75);
 }
 .location-bottom-details{
-    color: #999;
     font-size: 15px;
     margin-top: 20px;
+    margin-left: 15px;
+}
+.location-bottom-details div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.location-card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
 }
 /*Location-card*/
 
@@ -122,11 +135,12 @@ a:hover{
 /*Footer*/
 
 
-/*popup*/
+/*Popup message*/
 .popup-buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 20px;
+    font-size: 12px;
 }
 
 .btn-close{
@@ -136,9 +150,10 @@ a:hover{
 }
 
 .popup {
+    font-size: 12px;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 85%;
     transform: translate(-50%, -50%);
     display: none;
     z-index: 1000;
@@ -152,4 +167,10 @@ a:hover{
     max-width: 400px;
     margin: 0 auto;
 }
-/*popup*/
+/*Popup message*/
+
+/*Errors*/
+.errors{
+    color: red;
+}
+/*Errors*/
