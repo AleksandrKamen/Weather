@@ -5,10 +5,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import model.users.dto.UserDto;
-import model.users.service.UserService;
+import model.user.dto.UserDto;
 import service.RegistrationService;
-import util.ThymeleafUtil;
+import util.servlet.BaseServlet;
 import validator.exception.ValidationException;
 
 import java.io.IOException;
@@ -19,34 +18,39 @@ public class RegistrationServlet extends BaseServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            var servletContext = ThymeleafUtil.getServletContext(req, resp);
-            templateEngine.process("registration", servletContext, resp.getWriter());
+            try {
+                log.info("Processing registration page");
+                templateEngine.process("registration", context, resp.getWriter());
+            } catch (Exception e){
+                log.error("Error {} in registration page, method doGet",  e.getMessage());
+                templateEngine.process("error", context, resp.getWriter());
+            }
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            var userLogin = req.getParameter("login");
-            var password = req.getParameter("password");
-            var confirmPassword = req.getParameter("confirmPassword");
-            var userDto = buildUserDto(userLogin, password, confirmPassword);
+            var userDto = buildUserDto(req);
             var newSession = registrationService.registration(userDto);
-            registrationService.setCookies(req, resp, newSession);
-            resp.sendRedirect("/");
-
+            log.info("user {} is registered, session with id: {} created", userDto.getLogin(), newSession.getId());
+            registrationService.setCookies(resp, newSession);
+            resp.sendRedirect(req.getContextPath() + "/");
         } catch (ValidationException validationException) {
-            var servletContext = ThymeleafUtil.getServletContext(req, resp);
-            servletContext.setVariable("errors", validationException.getErrors());
-            templateEngine.process("registration", servletContext, resp.getWriter());
+            log.info("Validation error during registration: {}", validationException.getErrors());
+            context.setVariable("errors", validationException.getErrors());
+            templateEngine.process("registration", context, resp.getWriter());
         } catch (Exception e){
-            log.error(e.getMessage());
-            resp.sendRedirect("registration");
+            log.error("Error {} in registration page, method doPost",  e.getMessage());
+            templateEngine.process("error", context, resp.getWriter());
         }
     }
 
-    private UserDto buildUserDto(String login, String password, String confirmPassword) {
+    private UserDto buildUserDto(HttpServletRequest req) {
+        var userLogin = req.getParameter("login");
+        var password = req.getParameter("password");
+        var confirmPassword = req.getParameter("confirmPassword");
+
         return UserDto.builder()
-                .login(login)
+                .login(userLogin)
                 .password(password)
                 .confirmPassword(confirmPassword)
                 .build();

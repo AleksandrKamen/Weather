@@ -10,7 +10,6 @@ import model.user.service.UserService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 import util.ThymeleafUtil;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Optional;
