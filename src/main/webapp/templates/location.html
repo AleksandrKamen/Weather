@@ -71,10 +71,9 @@
                                 <span class="me-2" th:text="'Ветер: ' + ${weather.getWind().get('speed')}+ ' м/с ' + ${weather.getWindDirection()}"></span>
                                 <a><i class="fa-solid fa-wind"></i></a>
                             </div>
-                            <div class="d-flex align-items-center mb-4">
-            <span class="me-2"
-                  th:text="'Порывы ветера до ' + ${weather.getWind().get('gust')}+ ' м/с '"></span>
-                                <a><i class="fa-solid fa-tornado"></i></a>
+                            <div th:if="${weather.getWind().get('gust')}" class="d-flex align-items-center mb-4">
+                               <span  class="me-2" th:text="'Порывы ветера до ' + ${weather.getWind().get('gust')}+ ' м/с '"></span>
+                               <a><i class="fa-solid fa-tornado"></i></a>
                             </div>
                         </div>
                         <div class="location-card-button">
