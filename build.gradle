@@ -20,7 +20,7 @@ war {
   duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
 }
 
-tasks.withType(JavaCompile).configureEach {
+tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
 }
 
@@ -29,14 +29,11 @@ dependencies {
   compileOnly "org.projectlombok:${lombokVersion}"
   implementation "org.hibernate:hibernate-core:${hibernateVersion}"
   implementation 'org.postgresql:postgresql:42.7.1'
-  implementation 'org.slf4j:slf4j-log4j12:2.0.9'
-
+  implementation 'org.slf4j:slf4j-log4j12:2.0.12'
   implementation 'org.thymeleaf:thymeleaf:3.1.2.RELEASE'
   implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.0'
   implementation 'org.mindrot:jbcrypt:0.4'
-  implementation 'org.apache.httpcomponents:httpclient:4.5.14'
-
-
+  implementation 'org.apache.httpcomponents.client5:httpclient5:5.3.1'
 
   annotationProcessor "org.projectlombok:${lombokVersion}"
 
@@ -44,13 +41,16 @@ dependencies {
   testAnnotationProcessor "org.projectlombok:${lombokVersion}"
   testImplementation 'org.assertj:assertj-core:3.24.2'
   testImplementation 'org.mockito:mockito-core:5.8.0'
+  testImplementation 'org.mockito:mockito-junit-jupiter:5.10.0'
+  testImplementation 'com.h2database:h2:2.2.224'
   testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 test {
-useJUnitPlatform()}
+useJUnitPlatform()
+}
 
 test.finalizedBy jacocoTestReport
 jacocoTestReport.dependsOn test

@@ -4,34 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added ThymeleafListener and ThymeleafUtil">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/locations/mapper/LocationsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/LocationsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/LogOutServler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/home_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/search_page.html" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="finish html pages and css style">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationCreateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationReadMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/session/service/SessionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/CreateUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/ReadUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/DeleteLocationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/SessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/LocationAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherExceedingRequestsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherUserKeyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/translations_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/translations_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/dto/LocationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/entity/LocationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/mapper/LocationsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/mapper/CreateUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LocationsService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LogOutServler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +93,10 @@
       <list>
         <option value="HTTP Request" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -104,17 +135,17 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Weather_project/src/main/webapp/static/css",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Tennis-match-scoreboard",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.1976378",
     "project.structure.side.proportion": "0.31932774",
-    "settings.editor.selected.configurable": "File.Encoding",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -125,10 +156,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\test\resources" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\picture" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\css" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
-      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp" />
@@ -141,6 +173,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="service" />
       <recent name="users.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -156,78 +189,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;users.service.UserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UserServiceTest.CorrectUserDto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;users.service.UserServiceTest.CorrectUserDto&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="Weather_project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/test.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="AuthorizationUserTest$authorizationFailed.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Weather_project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.AuthorizationUserTest" />
+      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest$authorizationFailed" />
+      <option name="METHOD_NAME" value="incorrectLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationUserTest$authorizationFailed.incorrectParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Weather_project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service.AuthorizationUserTest" />
+      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest$authorizationFailed" />
+      <option name="METHOD_NAME" value="incorrectParameters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Weather_project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -319,19 +329,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Gradle.UserServiceTest" />
-      <item itemvalue="Gradle.UserServiceTest.CorrectUserDto" />
-      <item itemvalue="Gradle.Weather_project [build]" />
       <item itemvalue="HTTP Request.test | #1" />
+      <item itemvalue="JUnit.AuthorizationUserTest" />
+      <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectLogin" />
+      <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectParameters" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.test | #1" />
-        <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.UserServiceTest.CorrectUserDto" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.Weather_project [build]" />
+        <item itemvalue="JUnit.AuthorizationUserTest" />
+        <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectLogin" />
+        <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectParameters" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +380,56 @@
       <workItem from="1707064411481" duration="5517000" />
       <workItem from="1707070314498" duration="456000" />
       <workItem from="1707118900255" duration="4983000" />
-      <workItem from="1707131688172" duration="1659000" />
+      <workItem from="1707131688172" duration="4947000" />
+      <workItem from="1707139273583" duration="7567000" />
+      <workItem from="1707159185212" duration="574000" />
+      <workItem from="1707203028128" duration="11138000" />
+      <workItem from="1707220758915" duration="11580000" />
+      <workItem from="1707243069959" duration="606000" />
+      <workItem from="1707300667982" duration="11582000" />
+      <workItem from="1707313034721" duration="2667000" />
+      <workItem from="1707461732839" duration="14669000" />
+      <workItem from="1707480178107" duration="8637000" />
+      <workItem from="1707502593487" duration="498000" />
+      <workItem from="1707503219513" duration="496000" />
+      <workItem from="1707546323375" duration="9093000" />
+      <workItem from="1707566390096" duration="7030000" />
+      <workItem from="1707634220756" duration="7777000" />
+      <workItem from="1707642157469" duration="1078000" />
+      <workItem from="1707654653973" duration="5664000" />
+      <workItem from="1707665308464" duration="4278000" />
+      <workItem from="1707669862988" duration="196000" />
+      <workItem from="1707718927348" duration="4711000" />
+      <workItem from="1707743175337" duration="6831000" />
+      <workItem from="1707760516590" duration="4362000" />
+      <workItem from="1707805580362" duration="7092000" />
+      <workItem from="1707812688492" duration="133000" />
+      <workItem from="1707812829945" duration="5529000" />
+      <workItem from="1707829266462" duration="730000" />
+      <workItem from="1707830496488" duration="6376000" />
+      <workItem from="1707841527499" duration="6118000" />
+      <workItem from="1707851199830" duration="149000" />
+      <workItem from="1707852481220" duration="206000" />
+      <workItem from="1707911981358" duration="7037000" />
+      <workItem from="1707922666864" duration="7351000" />
+      <workItem from="1707935269702" duration="3275000" />
+      <workItem from="1707940279288" duration="218000" />
+      <workItem from="1707980315078" duration="10179000" />
+      <workItem from="1708000219587" duration="9199000" />
+      <workItem from="1708021520772" duration="2906000" />
+      <workItem from="1708077592974" duration="8082000" />
+      <workItem from="1708149542314" duration="8891000" />
+      <workItem from="1708159066550" duration="3000" />
+      <workItem from="1708159079117" duration="464000" />
+      <workItem from="1708159585929" duration="70000" />
+      <workItem from="1708159824313" duration="1851000" />
+      <workItem from="1708166245313" duration="12332000" />
+      <workItem from="1708241864845" duration="10258000" />
+      <workItem from="1708254852169" duration="5358000" />
+      <workItem from="1708265274977" duration="4893000" />
+      <workItem from="1708274190615" duration="3045000" />
+      <workItem from="1708323221782" duration="5978000" />
+      <workItem from="1708345140621" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -476,7 +535,111 @@
       <option name="project" value="LOCAL" />
       <updated>1707039043190</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added main.css, servlets">
+      <option name="closed" value="true" />
+      <created>1707134404723</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707134404723</updated>
+    </task>
+    <task id="LOCAL-00015" summary="bugs fixed in WeatherAPIService, add RegistrationServlet, HomePageServlet, footer">
+      <option name="closed" value="true" />
+      <created>1707213309354</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707213309354</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add getWindDirection in WeatherAPIService, create SelectedLocationServlet">
+      <option name="closed" value="true" />
+      <created>1707462175026</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707462175026</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added html and css">
+      <option name="closed" value="true" />
+      <created>1707554651285</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707554651285</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added cookies message">
+      <option name="closed" value="true" />
+      <created>1707572812694</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707572812694</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added BaseServlet, components html,html pages">
+      <option name="closed" value="true" />
+      <created>1707666899089</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707666899089</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added BaseServlet, components html,html pages">
+      <option name="closed" value="true" />
+      <created>1707666905959</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707666905959</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added Validator for UserDto and error message in RegistrationServlet and AuthorizationServlet">
+      <option name="closed" value="true" />
+      <created>1707834604071</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707834604071</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added error page in case of error">
+      <option name="closed" value="true" />
+      <created>1707985492507</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707985492507</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added BaseServlet">
+      <option name="closed" value="true" />
+      <created>1708154311583</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708154311583</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added WeatherAPIServiceTest and 2 json">
+      <option name="closed" value="true" />
+      <created>1708260173674</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708260173674</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added OpenWeatherInvalidResponse in  WeatherAPIServiceTest and MockitoExtension">
+      <option name="closed" value="true" />
+      <created>1708269798909</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708269798910</updated>
+    </task>
+    <task id="LOCAL-00026" summary="finish html pages and css style">
+      <option name="closed" value="true" />
+      <created>1708270143476</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708270143476</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +669,19 @@
     <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
     <MESSAGE value="added RegistrationService" />
     <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ThymeleafListener and ThymeleafUtil" />
+    <MESSAGE value="added main.css, servlets" />
+    <MESSAGE value="bugs fixed in WeatherAPIService, add RegistrationServlet, HomePageServlet, footer" />
+    <MESSAGE value="add getWindDirection in WeatherAPIService, create SelectedLocationServlet" />
+    <MESSAGE value="added html and css" />
+    <MESSAGE value="added cookies message" />
+    <MESSAGE value="added BaseServlet, components html,html pages" />
+    <MESSAGE value="added Validator for UserDto and error message in RegistrationServlet and AuthorizationServlet" />
+    <MESSAGE value="added error page in case of error" />
+    <MESSAGE value="added BaseServlet" />
+    <MESSAGE value="added WeatherAPIServiceTest and 2 json" />
+    <MESSAGE value="added OpenWeatherInvalidResponse in  WeatherAPIServiceTest and MockitoExtension" />
+    <MESSAGE value="finish html pages and css style" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish html pages and css style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

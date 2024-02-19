@@ -22,4 +22,8 @@ public class WeatherDto {
     private Map<String, Object> main;
     @JsonProperty("wind")
     private Map<String, Object> wind;
+    @JsonProperty("timezone")
+    private Long timezone;
+    private String windDirection;
+    private String currentTime;
 }

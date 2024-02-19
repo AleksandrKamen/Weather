@@ -1,8 +1,8 @@
-package model.locations.entity;
+package model.location.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import model.users.entity.UsersEntity;
+import model.user.entity.UserEntity;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,7 +11,7 @@ import model.users.entity.UsersEntity;
 @Entity
 @Builder
 @Table(name = "locations")
-public class LocationsEntity {
+public class LocationEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class LocationsEntity {
     private String name;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private UsersEntity user;
+    private UserEntity user;
     @Column(name = "latitude", nullable = false)
     private Double latitude;
     @Column(name = "longitude", nullable = false)

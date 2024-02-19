@@ -5,7 +5,7 @@ import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import util.ThymeleafUtil;
 @WebListener
-public class ThymeleafListener implements ServletContextListener { // прослушивает контекст веб приложения
+public class ThymeleafListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         var servletContext = sce.getServletContext();

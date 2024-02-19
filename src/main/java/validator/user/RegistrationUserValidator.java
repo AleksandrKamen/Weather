@@ -1,7 +1,7 @@
 package validator.user;
 
-import model.users.dto.UserDto;
-import model.users.repository.UserRepository;
+import model.user.dto.UserDto;
+import model.user.repository.UserRepository;
 import validator.Error;
 import validator.ValidationResult;
 import validator.Validator;
@@ -13,7 +13,7 @@ public class RegistrationUserValidator implements Validator<UserDto> {
         var validationResult = new ValidationResult();
 
         //login
-        if (!object.getLogin().matches("^[a-zA-Z0-9@-_]{3,10}$]")) {
+        if (!object.getLogin().matches("^[a-zA-Z0-9@-_]{3,20}$]")) {
             if (object.getLogin() == null || object.getLogin().isEmpty()) {
                 validationResult.add(Error.of(400, "Логин не задан"));
             }
@@ -21,13 +21,13 @@ public class RegistrationUserValidator implements Validator<UserDto> {
                 validationResult.add(Error.of(400, "Логин содержит пробелы"));
             }
             if (object.getLogin().length() < 3 ) {
-                validationResult.add(Error.of(400, "Логин млишком короткий"));
+                validationResult.add(Error.of(400, "Логин слишком короткий"));
             }
-            if (object.getLogin().length() > 10) {
+            if (object.getLogin().length() > 20) {
                 validationResult.add(Error.of(400, "Логин слишком длинный"));
             }
         }
-         if(userRepository.findByLogin(object.getLogin()).isPresent()) {
+         if(userRepository.findByLoginWithSession(object.getLogin()).isPresent()) {
             validationResult.add(Error.of(409, "Пользователь с данным логином уже существует"));
         }
 
@@ -45,7 +45,6 @@ public class RegistrationUserValidator implements Validator<UserDto> {
             if (object.getPassword().replaceAll("[a-zA-Z\\d]", "").length() != 0) {
                 validationResult.add(Error.of(400, "В пароле присутсвтуют спец символы"));
             }
-
         }
         if (object.getPassword().equals(object.getLogin())) {
             validationResult.add(Error.of(400, "Пароль не может совпадать с логином"));

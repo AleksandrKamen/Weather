@@ -1,7 +1,7 @@
 package validator.user;
 
-import model.users.dto.UserDto;
-import model.users.repository.UserRepository;
+import model.user.dto.UserDto;
+import model.user.repository.UserRepository;
 import org.mindrot.jbcrypt.BCrypt;
 import validator.Error;
 import validator.ValidationResult;
@@ -12,7 +12,7 @@ public class AuthorizationUserValidator implements Validator<UserDto> {
     @Override
     public ValidationResult isValid(UserDto object) {
         var validationResult = new ValidationResult();
-        var mabyUser = userRepository.findByLogin(object.getLogin());
+        var mabyUser = userRepository.findByLoginWithSession(object.getLogin());
         if (mabyUser.isPresent()){
             if (!BCrypt.checkpw(object.getPassword(), mabyUser.get().getPassword())){
                 validationResult.add(Error.of(400, "Пароль введен неверно"));

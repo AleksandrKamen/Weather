@@ -67,12 +67,20 @@ a:hover{
 
 /*Location-card*/
 .location-card{
+    position: relative;
     box-shadow:  0 2px 5px 0 rgba(0,0,0,0.100);
     transition: all .3s;
     min-height: 20vw;
     display: flex;
     flex-direction: column;
 }
+.current-time {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    padding: 5px;
+}
+
 .card-title{
     text-align: center;
 }

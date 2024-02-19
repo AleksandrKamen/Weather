@@ -1,17 +1,26 @@
 package service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import model.Weather.WeatherDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.locations.dto.LocationsDto;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+import model.Weather.WeatherDto;
+import model.location.dto.LocationDto;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
+import org.apache.hc.core5.http.io.entity.EntityUtils;
 import util.PropertiesUtil;
-import java.io.IOException;
+import validator.exception.OpenWeatherExceedingRequestsException;
+import validator.exception.OpenWeatherResponseException;
+import validator.exception.OpenWeatherUserKeyException;
+import java.net.SocketTimeoutException;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class WeatherAPIService {
     private static final String URL_KEY = "openWeather_url";
@@ -23,36 +32,81 @@ public class WeatherAPIService {
     private static final String Q_KEY = "openWeather_q";
     private static final String LATITUDE_KEY = "openWeather_lat";
     private static final String LONGITUDE_KEY = "openWeather_lon";
-    private final CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+    private static final String LANG_KEY = "openWeather_lang";
+    private CloseableHttpClient closeableHttpClient;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public WeatherDto getWeatherForLocation(LocationsDto locationsDto) throws IOException { // Поиск локции по координатам
+    public WeatherAPIService(CloseableHttpClient closeableHttpClient){
+        this.closeableHttpClient = closeableHttpClient;
+    }
 
+    public WeatherDto getWeatherForLocation(LocationDto locationsDto) throws OpenWeatherResponseException {
+        try {
+            var httpGet = createWeatherRequest(locationsDto);
+            var execute = closeableHttpClient.execute(httpGet);
+            checkResponseCode(execute.getCode());
+            var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
+            var weatherDto = objectMapper.readValue(string, WeatherDto.class);
+            weatherDto.setWindDirection(getWindDirection(weatherDto));
+            weatherDto.setCurrentTime(getCurrentTimeForLocation(weatherDto));
+            return weatherDto;
+        } catch (SocketTimeoutException timeoutException){
+            throw  new OpenWeatherResponseException("Время ожидания сервера истекло");
+        }
+        catch (Exception e){
+            throw new OpenWeatherResponseException("Ошибка запроса погоды для локации: " + locationsDto.getId());
+        }
+    }
+
+    public List<LocationDto> getLocationsByName(String name) throws OpenWeatherResponseException {
+
+       try {
+           var httpGet = createWeatherRequest(name);
+           var execute = closeableHttpClient.execute(httpGet);
+           checkResponseCode(execute.getCode());
+           var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
+           return objectMapper.readValue(string, new TypeReference<List<LocationDto>>() {
+           });
+       } catch (SocketTimeoutException timeoutException){
+           throw  new OpenWeatherResponseException("Время ожидания сервера истекло");
+       }
+       catch (Exception e){
+           throw new OpenWeatherResponseException("Ошибка запроса для локации с названием : " + e.getMessage());
+       }
+    }
+
+    private void checkResponseCode(int code){
+        switch (code){
+            case 401 -> throw new OpenWeatherUserKeyException("Ошибка ключа пользователя");
+            case 429 -> throw new OpenWeatherExceedingRequestsException("Превышено количество запросов");
+            case 404 -> throw new OpenWeatherExceedingRequestsException("Неверный формат запроса");
+            case 500,502,503,504 -> throw new OpenWeatherResponseException("Ошибка сервера OpenWeather");
+        }
+    }
+
+    private HttpGet createWeatherRequest(LocationDto locationDto) {
+        var requestConfig = RequestConfig.custom()
+                .setConnectTimeout(10, TimeUnit.SECONDS)
+                .build();
         var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, DATA_KEY, LATITUDE_KEY))
-                + locationsDto.getLatitude() + PropertiesUtil.get(LONGITUDE_KEY) + locationsDto.getLongitude()
-                + PropertiesUtil.get(List.of(APPID_KEY, UNITS_KEY)));
-        var execute = closeableHttpClient.execute(httpGet);
-        if (execute.getStatusLine().getStatusCode() != 200) {
-            throw new NullPointerException();
-        }
-        var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
-        return objectMapper.readValue(string, WeatherDto.class);
-    }
+                + locationDto.getLatitude() + PropertiesUtil.get(LONGITUDE_KEY) + locationDto.getLongitude()
+                + PropertiesUtil.get(List.of(APPID_KEY, UNITS_KEY, LANG_KEY)));
+        httpGet.setConfig(requestConfig);
 
-    public List<LocationsDto> getLocationsByName(String name) throws IOException { // Поиск локаций по названию
-        var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, GEO_KEY, Q_KEY)) + name
+        return httpGet;
+    }
+    private HttpGet createWeatherRequest(String name) {
+        var requestConfig = RequestConfig.custom()
+                .setConnectTimeout(10, TimeUnit.SECONDS)
+                .build();
+        var encodeName = URLEncoder.encode(name, StandardCharsets.UTF_8);
+        var httpGet = new HttpGet(PropertiesUtil.get(List.of(URL_KEY, GEO_KEY, Q_KEY)) + encodeName
                 + PropertiesUtil.get(List.of(LIMIT_KEY, APPID_KEY)));
-        var execute = closeableHttpClient.execute(httpGet);
-        if (execute.getStatusLine().getStatusCode() != 200) {
-            throw new NullPointerException();
-        }
-        var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
-        return objectMapper.readValue(string, new TypeReference<List<LocationsDto>>() {
-        });
-
+        httpGet.setConfig(requestConfig);
+        return httpGet;
     }
 
-    public String getWindDirection(WeatherDto weatherDto) {
+    private String getWindDirection(WeatherDto weatherDto) {
         var deg = Double.valueOf(weatherDto.getWind().get("deg").toString());
         if (deg >= 0 && deg < 45) {
             return "северный";
@@ -70,4 +124,12 @@ public class WeatherAPIService {
             return "западный";
         } else return "северо-западный";
     }
+
+    private String getCurrentTimeForLocation(WeatherDto weatherDto){
+        var currentUTC = Instant.now();
+        var currentWithOffset = currentUTC.plusSeconds(weatherDto.getTimezone());
+        var zonedDateTime = ZonedDateTime.ofInstant(currentWithOffset, ZoneId.of("UTC"));
+        return zonedDateTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+    }
+
 }

@@ -7,8 +7,8 @@ import util.HibernateUtil;
 import util.repository.BaseRepository;
 import java.time.LocalDateTime;
 
-public class SessionsRepository extends BaseRepository<SessionEntity,String> {
-    public SessionsRepository() {
+public class SessionRepository extends BaseRepository<SessionEntity,String> {
+    public SessionRepository() {
         super(SessionEntity.class);
     }
     public void deleteSessionsIfTimeIsUp(){
