@@ -20,16 +20,10 @@
 
                 <form th:if="${userLogin}" action="search" method="get" class="d-flex mx-auto" role="search">
                     <input class="form-control me-2" type="search" name="name" id="name"
-                           placeholder="Moscow" maxlength="20" aria-label="Search" required>
+                           placeholder="Москва" maxlength="20" aria-label="Search" required>
                     <button class="btn btn-primary" type="submit">Поиск</button>
                 </form>
                 <ul th:if="${userLogin}" class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
-<!--                    <li class="nav-item">-->
-<!--                        <form class="nav-link">-->
-<!--                            <button type="button" class="icon-button" data-toggle="tooltip" title="Поиск">-->
-<!--                                <i class="fa-solid fa-magnifying-glass"></i></button>-->
-<!--                        </form>-->
-<!--                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="tooltip" th:title="${userLogin}">
                             <i class="fa-solid fa-user"></i>

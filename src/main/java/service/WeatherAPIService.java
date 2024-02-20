@@ -51,10 +51,10 @@ public class WeatherAPIService {
             weatherDto.setCurrentTime(getCurrentTimeForLocation(weatherDto));
             return weatherDto;
         } catch (SocketTimeoutException timeoutException){
-            throw  new OpenWeatherResponseException("Время ожидания сервера истекло");
+            throw  new OpenWeatherResponseException("Server timeout");
         }
         catch (Exception e){
-            throw new OpenWeatherResponseException("Ошибка запроса погоды для локации: " + locationsDto.getId());
+            throw new OpenWeatherResponseException("Error requesting weather for location: " + locationsDto.getId());
         }
     }
 
@@ -68,19 +68,19 @@ public class WeatherAPIService {
            return objectMapper.readValue(string, new TypeReference<List<LocationDto>>() {
            });
        } catch (SocketTimeoutException timeoutException){
-           throw  new OpenWeatherResponseException("Время ожидания сервера истекло");
+           throw  new OpenWeatherResponseException("Server timeout");
        }
        catch (Exception e){
-           throw new OpenWeatherResponseException("Ошибка запроса для локации с названием : " + e.getMessage());
+           throw new OpenWeatherResponseException("Request error for location with name : " + e.getMessage());
        }
     }
 
     private void checkResponseCode(int code){
         switch (code){
-            case 401 -> throw new OpenWeatherUserKeyException("Ошибка ключа пользователя");
-            case 429 -> throw new OpenWeatherExceedingRequestsException("Превышено количество запросов");
-            case 404 -> throw new OpenWeatherExceedingRequestsException("Неверный формат запроса");
-            case 500,502,503,504 -> throw new OpenWeatherResponseException("Ошибка сервера OpenWeather");
+            case 401 -> throw new OpenWeatherUserKeyException("User key error");
+            case 429 -> throw new OpenWeatherExceedingRequestsException("Number of requests exceeded");
+            case 404 -> throw new OpenWeatherExceedingRequestsException("Invalid request format");
+            case 500,502,503,504 -> throw new OpenWeatherResponseException("OpenWeather server error");
         }
     }
 
