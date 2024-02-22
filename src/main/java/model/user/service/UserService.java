@@ -30,6 +30,4 @@ public class UserService {
     public UserEntity getUserWithLocations(String login) {
         return userRepository.findByLoginWithLocation(login).get();
     }
-
-
 }

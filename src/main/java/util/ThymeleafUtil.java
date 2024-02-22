@@ -15,32 +15,29 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 @UtilityClass
 public class ThymeleafUtil {
 
-    public TemplateEngine buildTemplateEngine(ServletContext servletContext){ // создание объекта TemplateEngine для обработки шаблонов
+    public TemplateEngine buildTemplateEngine(ServletContext servletContext){
 
         IWebApplication webApplication = JakartaServletWebApplication.buildApplication(servletContext);
-        var templateResolver = buildTemplateResolver(webApplication); // создаем TemplateResolver через наш метод
-        var templateEngine = new TemplateEngine();             // Создаем TemplateEngine
-        templateEngine.setTemplateResolver(templateResolver); // Применяем наш TemplateResolver
-        return templateEngine;          // Возвращаем TemplateEngine
+        var templateResolver = buildTemplateResolver(webApplication);
+        var templateEngine = new TemplateEngine();
+        templateEngine.setTemplateResolver(templateResolver);
+        return templateEngine;
     }
 
-    public WebContext getServletContext(HttpServletRequest request, HttpServletResponse response){ // получаем WebContext - контекст данных используемый для обработки шаблонов
-        var servletContext = request.getServletContext(); // получаем контекст из запроса
-        var webApplication = JakartaServletWebApplication.buildApplication(servletContext); // Этот объект используется для взаимодействия с Thymeleaf в контексте веб-приложения.
-        var webExchange = webApplication.buildExchange(request,response); // Этот объект предоставляет информацию о текущем HTTP-запросе и HTTP-ответе
-        return new WebContext(webExchange); // возвращаем контекст
+    public WebContext getServletContext(HttpServletRequest request, HttpServletResponse response){
+        var servletContext = request.getServletContext();
+        var webApplication = JakartaServletWebApplication.buildApplication(servletContext);
+        var webExchange = webApplication.buildExchange(request,response);
+        return new WebContext(webExchange);
     }
 
-    public ITemplateResolver buildTemplateResolver (IWebApplication webApplication){ // Создаем объект Resolver, ITemplateResolver - это обстракция для всех Resolver, IWebApplication - абстракция для веб приложения
-        var templateResolver = new WebApplicationTemplateResolver(webApplication);  // создание нашего WebApplicationTemplateResolver на основе webApplication
-        templateResolver.setTemplateMode(TemplateMode.HTML); // Устанвливаем модификацию
-        templateResolver.setPrefix("/templates/");  // Устанавливаем путь к шаблонам
-        templateResolver.setSuffix(".html"); //  устанавливаем суффикс
-        templateResolver.setCacheTTLMs(0L); // Установка времени нахождения в кэш
-        templateResolver.setCharacterEncoding("UTF-8"); // Устанавливаем корректировку
-        return templateResolver;                 // возвращаем созданный объект
+    public ITemplateResolver buildTemplateResolver (IWebApplication webApplication){
+        var templateResolver = new WebApplicationTemplateResolver(webApplication);
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setPrefix("/templates/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setCacheTTLMs(0L);
+        templateResolver.setCharacterEncoding("UTF-8");
+        return templateResolver;
     }
-
-
-
 }

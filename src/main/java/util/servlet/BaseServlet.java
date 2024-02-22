@@ -21,7 +21,6 @@ public abstract class BaseServlet extends HttpServlet {
     private UserService userService = null;
     private SessionService sessionService = null;
 
-
     @Override
     public void init(ServletConfig config) throws ServletException {
         templateEngine = (TemplateEngine) config.getServletContext().getAttribute("templateEngine");

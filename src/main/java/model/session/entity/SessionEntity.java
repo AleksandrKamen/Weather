@@ -3,7 +3,6 @@ package model.session.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import model.user.entity.UserEntity;
-
 import java.time.LocalDateTime;
 
 @NoArgsConstructor

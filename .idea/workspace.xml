@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="fixx WeatherAPIServiceTest">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added Dockerfile and docker-compose.yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,35 +84,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new-Branch&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/.gradle&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.1976378&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.31932774&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "new-Branch",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Docker2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.1976378",
+    "project.structure.side.proportion": "0.31932774",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
@@ -447,7 +456,7 @@
       <workItem from="1708592565861" duration="675000" />
       <workItem from="1708593291691" duration="997000" />
       <workItem from="1708594299571" duration="155000" />
-      <workItem from="1708594659346" duration="1511000" />
+      <workItem from="1708594659346" duration="3540000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -721,7 +730,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708595052150</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added Dockerfile and docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1708596512992</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1708596512992</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added Dockerfile and docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1708596540007</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1708596540007</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,7 +764,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added UserDto, Mapper and Validator" />
     <MESSAGE value="added LocationsDto and CreateUserValidator" />
     <MESSAGE value="added CharsetFilter, UserServiceTest" />
     <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
@@ -764,7 +788,8 @@
     <MESSAGE value="set session_time = 180 minutes, added  isSessionExpired in SessionService, handleSessionCookie in BaseServlet" />
     <MESSAGE value="set" />
     <MESSAGE value="fixx WeatherAPIServiceTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixx WeatherAPIServiceTest" />
+    <MESSAGE value="added Dockerfile and docker-compose.yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Dockerfile and docker-compose.yml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

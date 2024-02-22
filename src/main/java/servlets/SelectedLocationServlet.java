@@ -1,6 +1,5 @@
 package servlets;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,7 +12,6 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import service.WeatherAPIService;
 import util.servlet.BaseServlet;
 import validator.exception.LocationAlreadyExistsException;
-
 import java.io.IOException;
 
 @WebServlet("/location")

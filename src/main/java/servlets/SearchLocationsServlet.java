@@ -9,7 +9,6 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import service.WeatherAPIService;
 import util.servlet.BaseServlet;
 import validator.exception.OpenWeatherResponseException;
-
 import java.io.IOException;
 
 @WebServlet("/search")

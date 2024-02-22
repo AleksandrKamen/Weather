@@ -1,7 +1,6 @@
 package model.location.repository;
 
 import model.location.entity.LocationEntity;
-import model.user.entity.UserEntity;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
 import java.util.List;

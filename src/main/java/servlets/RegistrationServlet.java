@@ -9,7 +9,6 @@ import model.user.dto.UserDto;
 import service.RegistrationService;
 import util.servlet.BaseServlet;
 import validator.exception.ValidationException;
-
 import java.io.IOException;
 @Slf4j
 @WebServlet("/registration")
