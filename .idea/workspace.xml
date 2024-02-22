@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added volume ind docker-compose.yml, final fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +15,53 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="Interface" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2atnh8NFXbe34ViOPuVMkeJSDnS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,28 +70,256 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "new-Branch",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Docker2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.1976378",
+    "project.structure.side.proportion": "0.31932774",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\test\resources" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\picture" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\css" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources\static" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF\templates" />
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service" />
+      <recent name="users.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="util" />
+      <recent name="servlets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Weather_project [build]">
+    <configuration name="RegistrationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.RegistrationUserTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Weather_project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Weather_project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Weather_project [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="registrationFailed.userDuplication" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.RegistrationUserTest$registrationFailed.userDuplication&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="Gradle : com.galaxy : Weather_project-1.0-SNAPSHOT.war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___com_galaxy___Weather_project_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="153cb343-8a27-42ce-a719-33a0a3c265e0" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57685" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -58,6 +327,23 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.Weather_project [clean]" />
+      <item itemvalue="Gradle.RegistrationUserTest" />
+      <item itemvalue="Gradle.registrationFailed.userDuplication" />
+      <item itemvalue="Gradle.Weather_project [test]" />
+      <item itemvalue="Gradle.Weather_project [build]" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Weather_project [build]" />
+        <item itemvalue="Gradle.Weather_project [clean]" />
+        <item itemvalue="Gradle.RegistrationUserTest" />
+        <item itemvalue="Gradle.registrationFailed.userDuplication" />
+        <item itemvalue="Gradle.Weather_project [test]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,8 +353,438 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705146861872</updated>
-      <workItem from="1705146862900" duration="1000" />
+      <workItem from="1705146862900" duration="4234000" />
+      <workItem from="1705162687073" duration="6000000" />
+      <workItem from="1705235292942" duration="623000" />
+      <workItem from="1705300790971" duration="4608000" />
+      <workItem from="1705316420491" duration="6850000" />
+      <workItem from="1705323386251" duration="198000" />
+      <workItem from="1705334307575" duration="7084000" />
+      <workItem from="1705396400811" duration="3205000" />
+      <workItem from="1705402401165" duration="913000" />
+      <workItem from="1705406688992" duration="1862000" />
+      <workItem from="1705473027591" duration="4586000" />
+      <workItem from="1705489171270" duration="5462000" />
+      <workItem from="1705498231475" duration="3217000" />
+      <workItem from="1705501523850" duration="52000" />
+      <workItem from="1705564151902" duration="5741000" />
+      <workItem from="1705570555247" duration="1568000" />
+      <workItem from="1705576864598" duration="7486000" />
+      <workItem from="1705584717753" duration="648000" />
+      <workItem from="1705593877004" duration="2914000" />
+      <workItem from="1705646732441" duration="8358000" />
+      <workItem from="1705663587206" duration="1422000" />
+      <workItem from="1705672010999" duration="361000" />
+      <workItem from="1707032797585" duration="14000" />
+      <workItem from="1707032892509" duration="7904000" />
+      <workItem from="1707064411481" duration="5517000" />
+      <workItem from="1707070314498" duration="456000" />
+      <workItem from="1707118900255" duration="4983000" />
+      <workItem from="1707131688172" duration="4947000" />
+      <workItem from="1707139273583" duration="7567000" />
+      <workItem from="1707159185212" duration="574000" />
+      <workItem from="1707203028128" duration="11138000" />
+      <workItem from="1707220758915" duration="11580000" />
+      <workItem from="1707243069959" duration="606000" />
+      <workItem from="1707300667982" duration="11582000" />
+      <workItem from="1707313034721" duration="2667000" />
+      <workItem from="1707461732839" duration="14669000" />
+      <workItem from="1707480178107" duration="8637000" />
+      <workItem from="1707502593487" duration="498000" />
+      <workItem from="1707503219513" duration="496000" />
+      <workItem from="1707546323375" duration="9093000" />
+      <workItem from="1707566390096" duration="7030000" />
+      <workItem from="1707634220756" duration="7777000" />
+      <workItem from="1707642157469" duration="1078000" />
+      <workItem from="1707654653973" duration="5664000" />
+      <workItem from="1707665308464" duration="4278000" />
+      <workItem from="1707669862988" duration="196000" />
+      <workItem from="1707718927348" duration="4711000" />
+      <workItem from="1707743175337" duration="6831000" />
+      <workItem from="1707760516590" duration="4362000" />
+      <workItem from="1707805580362" duration="7092000" />
+      <workItem from="1707812688492" duration="133000" />
+      <workItem from="1707812829945" duration="5529000" />
+      <workItem from="1707829266462" duration="730000" />
+      <workItem from="1707830496488" duration="6376000" />
+      <workItem from="1707841527499" duration="6118000" />
+      <workItem from="1707851199830" duration="149000" />
+      <workItem from="1707852481220" duration="206000" />
+      <workItem from="1707911981358" duration="7037000" />
+      <workItem from="1707922666864" duration="7351000" />
+      <workItem from="1707935269702" duration="3275000" />
+      <workItem from="1707940279288" duration="218000" />
+      <workItem from="1707980315078" duration="10179000" />
+      <workItem from="1708000219587" duration="9199000" />
+      <workItem from="1708021520772" duration="2906000" />
+      <workItem from="1708077592974" duration="8082000" />
+      <workItem from="1708149542314" duration="8891000" />
+      <workItem from="1708159066550" duration="3000" />
+      <workItem from="1708159079117" duration="464000" />
+      <workItem from="1708159585929" duration="70000" />
+      <workItem from="1708159824313" duration="1851000" />
+      <workItem from="1708166245313" duration="12332000" />
+      <workItem from="1708241864845" duration="10258000" />
+      <workItem from="1708254852169" duration="5358000" />
+      <workItem from="1708265274977" duration="4893000" />
+      <workItem from="1708274190615" duration="3045000" />
+      <workItem from="1708323221782" duration="5978000" />
+      <workItem from="1708345140621" duration="12598000" />
+      <workItem from="1708409331347" duration="2439000" />
+      <workItem from="1708420420821" duration="733000" />
+      <workItem from="1708425455554" duration="1209000" />
+      <workItem from="1708432181279" duration="2000" />
+      <workItem from="1708532562983" duration="10881000" />
+      <workItem from="1708586275163" duration="5766000" />
+      <workItem from="1708592143960" duration="349000" />
+      <workItem from="1708592565861" duration="675000" />
+      <workItem from="1708593291691" duration="997000" />
+      <workItem from="1708594299571" duration="155000" />
+      <workItem from="1708594659346" duration="3847000" />
     </task>
+    <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
+      <option name="closed" value="true" />
+      <created>1705147567019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705147567019</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added dependencies in build.gradle">
+      <option name="closed" value="true" />
+      <created>1705148421316</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705148421316</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added hibernate.cfg.xml">
+      <option name="closed" value="true" />
+      <created>1705149111520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705149111520</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added HibernateUtil">
+      <option name="closed" value="true" />
+      <created>1705149227834</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705149227834</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added HibernateUtil">
+      <option name="closed" value="true" />
+      <created>1705150971050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705150971050</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added Entity classes">
+      <option name="closed" value="true" />
+      <created>1705164233754</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705164233754</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added dependencies slf4j, jackson, jbcrypt, and repository">
+      <option name="closed" value="true" />
+      <created>1705167464838</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705167464838</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added UserDto, Mapper and Validator">
+      <option name="closed" value="true" />
+      <created>1705301970580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705301970580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added LocationsDto and CreateUserValidator">
+      <option name="closed" value="true" />
+      <created>1705305369733</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705305369733</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added CharsetFilter, UserServiceTest">
+      <option name="closed" value="true" />
+      <created>1705321243149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705321243149</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml">
+      <option name="closed" value="true" />
+      <created>1705476470327</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705476470328</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added RegistrationService">
+      <option name="closed" value="true" />
+      <created>1705594028874</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705594028874</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added ThymeleafListener and ThymeleafUtil">
+      <option name="closed" value="true" />
+      <created>1707039043190</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707039043190</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added main.css, servlets">
+      <option name="closed" value="true" />
+      <created>1707134404723</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707134404723</updated>
+    </task>
+    <task id="LOCAL-00015" summary="bugs fixed in WeatherAPIService, add RegistrationServlet, HomePageServlet, footer">
+      <option name="closed" value="true" />
+      <created>1707213309354</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707213309354</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add getWindDirection in WeatherAPIService, create SelectedLocationServlet">
+      <option name="closed" value="true" />
+      <created>1707462175026</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707462175026</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added html and css">
+      <option name="closed" value="true" />
+      <created>1707554651285</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707554651285</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added cookies message">
+      <option name="closed" value="true" />
+      <created>1707572812694</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1707572812694</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added BaseServlet, components html,html pages">
+      <option name="closed" value="true" />
+      <created>1707666899089</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707666899089</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added BaseServlet, components html,html pages">
+      <option name="closed" value="true" />
+      <created>1707666905959</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707666905959</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added Validator for UserDto and error message in RegistrationServlet and AuthorizationServlet">
+      <option name="closed" value="true" />
+      <created>1707834604071</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1707834604071</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added error page in case of error">
+      <option name="closed" value="true" />
+      <created>1707985492507</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1707985492507</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added BaseServlet">
+      <option name="closed" value="true" />
+      <created>1708154311583</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708154311583</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added WeatherAPIServiceTest and 2 json">
+      <option name="closed" value="true" />
+      <created>1708260173674</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708260173674</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added OpenWeatherInvalidResponse in  WeatherAPIServiceTest and MockitoExtension">
+      <option name="closed" value="true" />
+      <created>1708269798909</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708269798910</updated>
+    </task>
+    <task id="LOCAL-00026" summary="finish html pages and css style">
+      <option name="closed" value="true" />
+      <created>1708270143476</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708270143476</updated>
+    </task>
+    <task id="LOCAL-00027" summary="finish servlets, add Mockito and h2 dependencies">
+      <option name="closed" value="true" />
+      <created>1708345720736</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708345720736</updated>
+    </task>
+    <task id="LOCAL-00028" summary="finish mappers, test, validators, service, exception">
+      <option name="closed" value="true" />
+      <created>1708346021610</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708346021610</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Wind gust - show if available">
+      <option name="closed" value="true" />
+      <created>1708346389855</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708346389855</updated>
+    </task>
+    <task id="LOCAL-00030" summary="changing error message language">
+      <option name="closed" value="true" />
+      <created>1708410062336</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708410062336</updated>
+    </task>
+    <task id="LOCAL-00031" summary="set session_time = 180 minutes, added  isSessionExpired in SessionService, handleSessionCookie in BaseServlet">
+      <option name="closed" value="true" />
+      <created>1708589919387</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708589919387</updated>
+    </task>
+    <task id="LOCAL-00032" summary="set">
+      <option name="closed" value="true" />
+      <created>1708594941089</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594941089</updated>
+    </task>
+    <task id="LOCAL-00033" summary="set">
+      <option name="closed" value="true" />
+      <created>1708594997000</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594997000</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixx WeatherAPIServiceTest">
+      <option name="closed" value="true" />
+      <created>1708595052150</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708595052150</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added Dockerfile and docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1708596512992</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1708596512992</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added Dockerfile and docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1708596540007</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1708596540007</updated>
+    </task>
+    <task id="LOCAL-00037" summary="added volume ind docker-compose.yml, final fixes">
+      <option name="closed" value="true" />
+      <created>1708598429426</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708598429426</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added CharsetFilter, UserServiceTest" />
+    <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
+    <MESSAGE value="added RegistrationService" />
+    <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
+    <MESSAGE value="added main.css, servlets" />
+    <MESSAGE value="bugs fixed in WeatherAPIService, add RegistrationServlet, HomePageServlet, footer" />
+    <MESSAGE value="add getWindDirection in WeatherAPIService, create SelectedLocationServlet" />
+    <MESSAGE value="added html and css" />
+    <MESSAGE value="added cookies message" />
+    <MESSAGE value="added BaseServlet, components html,html pages" />
+    <MESSAGE value="added Validator for UserDto and error message in RegistrationServlet and AuthorizationServlet" />
+    <MESSAGE value="added error page in case of error" />
+    <MESSAGE value="added BaseServlet" />
+    <MESSAGE value="added WeatherAPIServiceTest and 2 json" />
+    <MESSAGE value="added OpenWeatherInvalidResponse in  WeatherAPIServiceTest and MockitoExtension" />
+    <MESSAGE value="finish html pages and css style" />
+    <MESSAGE value="finish servlets, add Mockito and h2 dependencies" />
+    <MESSAGE value="finish mappers, test, validators, service, exception" />
+    <MESSAGE value="Wind gust - show if available" />
+    <MESSAGE value="changing error message language" />
+    <MESSAGE value="set session_time = 180 minutes, added  isSessionExpired in SessionService, handleSessionCookie in BaseServlet" />
+    <MESSAGE value="set" />
+    <MESSAGE value="fixx WeatherAPIServiceTest" />
+    <MESSAGE value="added Dockerfile and docker-compose.yml" />
+    <MESSAGE value="added volume ind docker-compose.yml, final fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added volume ind docker-compose.yml, final fixes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
