@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added Dockerfile and docker-compose.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added volume ind docker-compose.yml, final fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -456,7 +440,7 @@
       <workItem from="1708592565861" duration="675000" />
       <workItem from="1708593291691" duration="997000" />
       <workItem from="1708594299571" duration="155000" />
-      <workItem from="1708594659346" duration="3540000" />
+      <workItem from="1708594659346" duration="3847000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -746,7 +730,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708596540007</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="added volume ind docker-compose.yml, final fixes">
+      <option name="closed" value="true" />
+      <created>1708598429426</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708598429426</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +756,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added LocationsDto and CreateUserValidator" />
     <MESSAGE value="added CharsetFilter, UserServiceTest" />
     <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
     <MESSAGE value="added RegistrationService" />
@@ -789,7 +780,8 @@
     <MESSAGE value="set" />
     <MESSAGE value="fixx WeatherAPIServiceTest" />
     <MESSAGE value="added Dockerfile and docker-compose.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Dockerfile and docker-compose.yml" />
+    <MESSAGE value="added volume ind docker-compose.yml, final fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added volume ind docker-compose.yml, final fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
