@@ -49,7 +49,7 @@ class RegistrationUserTest {
         @Test
         void userDuplication() {
             var newUser = UserDto.builder()
-                    .login("test@test")
+                    .login("test@test2")
                     .password("test")
                     .confirmPassword("test")
                     .build();
