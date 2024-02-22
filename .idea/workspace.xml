@@ -4,64 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="finish html pages and css style">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationCreateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/session/service/SessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/CreateUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/ReadUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/LocationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/DeleteLocationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/SessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/LocationAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherExceedingRequestsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherResponseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherUserKeyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translations_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translations_ru.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="fixx WeatherAPIServiceTest">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Weather/WeatherDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/dto/LocationsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/dto/LocationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/entity/LocationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/entity/LocationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/mapper/LocationsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/locations/repository/LocationsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/SessionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/entity/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/mapper/CreateUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/users/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LocationsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LogOutServler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/CreateUserValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/service/UserServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +47,7 @@
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -125,42 +75,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "new-Branch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Tennis-match-scoreboard",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.1976378",
-    "project.structure.side.proportion": "0.31932774",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new-Branch&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/.gradle&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.1976378&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31932774&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\test\resources" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\picture" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\static\css" />
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\webapp" />
@@ -181,63 +131,120 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Weather_project.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/test.http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="Gradle.Weather_project [build]">
+    <configuration name="RegistrationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.RegistrationUserTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AuthorizationUserTest$authorizationFailed.incorrectLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Weather_project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service.AuthorizationUserTest" />
-      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest$authorizationFailed" />
-      <option name="METHOD_NAME" value="incorrectLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Weather_project [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="AuthorizationUserTest$authorizationFailed.incorrectParameters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Weather_project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service.AuthorizationUserTest" />
-      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest$authorizationFailed" />
-      <option name="METHOD_NAME" value="incorrectParameters" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Weather_project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="AuthorizationUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Weather_project.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.AuthorizationUserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Weather_project [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="registrationFailed.userDuplication" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.RegistrationUserTest$registrationFailed.userDuplication&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -328,20 +335,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.test | #1" />
-      <item itemvalue="JUnit.AuthorizationUserTest" />
-      <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectLogin" />
-      <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectParameters" />
+      <item itemvalue="Gradle.Weather_project [clean]" />
+      <item itemvalue="Gradle.RegistrationUserTest" />
+      <item itemvalue="Gradle.registrationFailed.userDuplication" />
+      <item itemvalue="Gradle.Weather_project [test]" />
+      <item itemvalue="Gradle.Weather_project [build]" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.test | #1" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AuthorizationUserTest" />
-        <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectLogin" />
-        <item itemvalue="JUnit.AuthorizationUserTest$authorizationFailed.incorrectParameters" />
+        <item itemvalue="Gradle.Weather_project [build]" />
+        <item itemvalue="Gradle.Weather_project [clean]" />
+        <item itemvalue="Gradle.RegistrationUserTest" />
+        <item itemvalue="Gradle.registrationFailed.userDuplication" />
+        <item itemvalue="Gradle.Weather_project [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -429,7 +436,18 @@
       <workItem from="1708265274977" duration="4893000" />
       <workItem from="1708274190615" duration="3045000" />
       <workItem from="1708323221782" duration="5978000" />
-      <workItem from="1708345140621" duration="302000" />
+      <workItem from="1708345140621" duration="12598000" />
+      <workItem from="1708409331347" duration="2439000" />
+      <workItem from="1708420420821" duration="733000" />
+      <workItem from="1708425455554" duration="1209000" />
+      <workItem from="1708432181279" duration="2000" />
+      <workItem from="1708532562983" duration="10881000" />
+      <workItem from="1708586275163" duration="5766000" />
+      <workItem from="1708592143960" duration="349000" />
+      <workItem from="1708592565861" duration="675000" />
+      <workItem from="1708593291691" duration="997000" />
+      <workItem from="1708594299571" duration="155000" />
+      <workItem from="1708594659346" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -639,7 +657,71 @@
       <option name="project" value="LOCAL" />
       <updated>1708270143476</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="finish servlets, add Mockito and h2 dependencies">
+      <option name="closed" value="true" />
+      <created>1708345720736</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708345720736</updated>
+    </task>
+    <task id="LOCAL-00028" summary="finish mappers, test, validators, service, exception">
+      <option name="closed" value="true" />
+      <created>1708346021610</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708346021610</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Wind gust - show if available">
+      <option name="closed" value="true" />
+      <created>1708346389855</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708346389855</updated>
+    </task>
+    <task id="LOCAL-00030" summary="changing error message language">
+      <option name="closed" value="true" />
+      <created>1708410062336</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708410062336</updated>
+    </task>
+    <task id="LOCAL-00031" summary="set session_time = 180 minutes, added  isSessionExpired in SessionService, handleSessionCookie in BaseServlet">
+      <option name="closed" value="true" />
+      <created>1708589919387</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708589919387</updated>
+    </task>
+    <task id="LOCAL-00032" summary="set">
+      <option name="closed" value="true" />
+      <created>1708594941089</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594941089</updated>
+    </task>
+    <task id="LOCAL-00033" summary="set">
+      <option name="closed" value="true" />
+      <created>1708594997000</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708594997000</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixx WeatherAPIServiceTest">
+      <option name="closed" value="true" />
+      <created>1708595052150</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708595052150</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,12 +739,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete sourceCompatibility and targetCompatibility from gradle" />
-    <MESSAGE value="added dependencies in build.gradle" />
-    <MESSAGE value="added hibernate.cfg.xml" />
-    <MESSAGE value="added HibernateUtil" />
-    <MESSAGE value="added Entity classes" />
-    <MESSAGE value="added dependencies slf4j, jackson, jbcrypt, and repository" />
     <MESSAGE value="added UserDto, Mapper and Validator" />
     <MESSAGE value="added LocationsDto and CreateUserValidator" />
     <MESSAGE value="added CharsetFilter, UserServiceTest" />
@@ -681,7 +757,14 @@
     <MESSAGE value="added WeatherAPIServiceTest and 2 json" />
     <MESSAGE value="added OpenWeatherInvalidResponse in  WeatherAPIServiceTest and MockitoExtension" />
     <MESSAGE value="finish html pages and css style" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish html pages and css style" />
+    <MESSAGE value="finish servlets, add Mockito and h2 dependencies" />
+    <MESSAGE value="finish mappers, test, validators, service, exception" />
+    <MESSAGE value="Wind gust - show if available" />
+    <MESSAGE value="changing error message language" />
+    <MESSAGE value="set session_time = 180 minutes, added  isSessionExpired in SessionService, handleSessionCookie in BaseServlet" />
+    <MESSAGE value="set" />
+    <MESSAGE value="fixx WeatherAPIServiceTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixx WeatherAPIServiceTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
