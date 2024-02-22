@@ -24,7 +24,7 @@ public class UserService {
             user.addLocation(location);
             userRepository.update(user);
         } else {
-            throw new LocationAlreadyExistsException("Данная локация уже добавлена");
+            throw new LocationAlreadyExistsException("Location has already been added");
         }
     }
     public UserEntity getUserWithLocations(String login) {

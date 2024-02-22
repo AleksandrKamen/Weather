@@ -6,6 +6,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.session.service.SessionService;
 import model.user.service.UserService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -18,12 +19,14 @@ public abstract class BaseServlet extends HttpServlet {
     protected TemplateEngine templateEngine;
     protected WebContext context;
     private UserService userService = null;
+    private SessionService sessionService = null;
 
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         templateEngine = (TemplateEngine) config.getServletContext().getAttribute("templateEngine");
         userService = new UserService();
+        sessionService = new SessionService();
         super.init(config);
     }
     @Override
@@ -39,18 +42,22 @@ public abstract class BaseServlet extends HttpServlet {
         }
         return Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName)).findFirst();
     }
+
+    private void handleSessionCookie(String sessionId) {
+        sessionService.getSessionById(sessionId)
+                .filter(sessionService::isSessionExpired)
+                .flatMap(session -> userService.getUserBySessionId(sessionId))
+                .ifPresent(user -> {
+                    context.setVariable("session_id", sessionId);
+                    context.setVariable("userLogin", user.getLogin());
+                });
+    }
+
     private void setVariablesUserLoginAndSessionId(HttpServletRequest req) throws IOException {
         try {
-            var optionalCookie = findCookieByName(req.getCookies(), "session_id");
-            if (optionalCookie.isPresent()) {
-                var sessionId = optionalCookie.get().getValue();
-                var optionalUser = userService.getUserBySessionId(sessionId);
-                if (optionalUser.isPresent()){
-                    context.setVariable("session_id",sessionId);
-                    context.setVariable("userLogin",optionalUser.get().getLogin());
-                }
-            }
-        } catch (Exception e){
+            findCookieByName(req.getCookies(), "session_id")
+                    .ifPresent(sessionCookie -> handleSessionCookie(sessionCookie.getValue()));
+        } catch (Exception e) {
 
         }
     }
