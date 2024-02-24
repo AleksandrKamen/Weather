@@ -52,6 +52,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AleksandrKamen&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="27e293df-b383-49b4-bb44-22d058e54a28" />
+        <option name="url" value="https://github.com/AleksandrKamen/Weather.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -449,7 +463,7 @@
       <workItem from="1708625774279" duration="3355000" />
       <workItem from="1708682315519" duration="5543000" />
       <workItem from="1708752925208" duration="2279000" />
-      <workItem from="1708758171500" duration="9172000" />
+      <workItem from="1708758171500" duration="9291000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -771,7 +785,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708767266280</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fixed I'm not a robot checkbox">
+      <option name="closed" value="true" />
+      <created>1708767395784</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1708767395784</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

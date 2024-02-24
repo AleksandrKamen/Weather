@@ -21,7 +21,7 @@
                         <div class="location-bottom-details">
                             <p th:text="'Координаты: ' + ${location.latitude} +', '  + ${location.longitude}"></p>
                             <p th:text="'Страна: ' + ${location.country}"></p>
-                            <p th:text="'Штат: ' + ${location.state}"></p>
+                            <p th:text="${location.state != null ? 'Штат: ' + location.state : ''}"></p>
                         </div>
                     </div>
                     <div class="location-card-button">
