@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="hidden sql">
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="change navbar href title">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/components/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/components/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/components/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +49,10 @@
         <option value="Interface" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="Dockerfile" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -61,6 +70,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -127,7 +139,31 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Weather_project [test]">
+  <component name="RunManager" selected="Gradle.RegistrationUserTest">
+    <configuration name="AuthorizationUserTest.authorizationSuccessful" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;service.AuthorizationUserTest.authorizationSuccessful&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="RegistrationUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,28 +200,6 @@
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="Weather_project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -331,7 +345,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Weather_project [clean]" />
+      <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
       <item itemvalue="Gradle.RegistrationUserTest" />
       <item itemvalue="Gradle.registrationFailed.userDuplication" />
       <item itemvalue="Gradle.Weather_project [test]" />
@@ -340,11 +354,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RegistrationUserTest" />
+        <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
         <item itemvalue="Gradle.Weather_project [test]" />
         <item itemvalue="Gradle.Weather_project [build]" />
         <item itemvalue="Gradle.registrationFailed.userDuplication" />
-        <item itemvalue="Gradle.RegistrationUserTest" />
-        <item itemvalue="Gradle.Weather_project [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -444,7 +458,10 @@
       <workItem from="1708593291691" duration="997000" />
       <workItem from="1708594299571" duration="155000" />
       <workItem from="1708594659346" duration="3847000" />
-      <workItem from="1708625774279" duration="1258000" />
+      <workItem from="1708625774279" duration="3355000" />
+      <workItem from="1708682315519" duration="5543000" />
+      <workItem from="1708752925208" duration="2279000" />
+      <workItem from="1708758171500" duration="8247000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -742,7 +759,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708598429426</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="change navbar href title">
+      <option name="closed" value="true" />
+      <created>1708627105415</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1708627105416</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -760,7 +785,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added CharsetFilter, UserServiceTest" />
     <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
     <MESSAGE value="added RegistrationService" />
     <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
@@ -785,7 +809,8 @@
     <MESSAGE value="fixx WeatherAPIServiceTest" />
     <MESSAGE value="added Dockerfile and docker-compose.yml" />
     <MESSAGE value="added volume ind docker-compose.yml, final fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added volume ind docker-compose.yml, final fixes" />
+    <MESSAGE value="change navbar href title" />
+    <option name="LAST_COMMIT_MESSAGE" value="change navbar href title" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @Builder
 @ToString(exclude = {"locations","sessions"})
-@Table(name = "users")
+@Table(name = "users", indexes = {@Index(name = "idx_login", columnList = "login")})
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

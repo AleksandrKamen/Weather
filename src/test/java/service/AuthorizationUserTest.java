@@ -1,48 +1,45 @@
 package service;
 
+import model.session.repository.SessionRepository;
 import model.user.dto.UserDto;
-import model.user.repository.UserRepository;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import validator.exception.ValidationException;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AuthorizationUserTest {
-    static RegistrationService registrationService = new RegistrationService();
-    static UserRepository userRepository = new UserRepository();
-    static String LOGIN = "login";
-    static String PASSWORD = "password";
+    private RegistrationService registrationService;
+    private SessionRepository sessionRepository;
+    private static String LOGIN_TEST = "login";
+    private static String PASSWORD_TEST = "password";
 
     @BeforeAll
-    static void addUser() {
-        registrationService.registration(UserDto.builder().login(LOGIN).password(PASSWORD).confirmPassword(PASSWORD).build());
+     void init() {
+        registrationService = new RegistrationService();
+        sessionRepository = new SessionRepository();
     }
-
-    @AfterAll
-    static void destroy() {
-        userRepository.delete(1L);
-        registrationService = null;
-        userRepository = null;
-    }
-
     @Test
     void authorizationSuccessful() {
-        var user = UserDto.builder().login(LOGIN).password(PASSWORD).build();
+        var user = UserDto.builder().login(LOGIN_TEST).password(PASSWORD_TEST).confirmPassword(PASSWORD_TEST).build();
+        registrationService.registration(user);
         var newSession = registrationService.authorization(user);
-        assertTrue(newSession != null);
+      assertAll(
+              ()-> assertNotNull(newSession),
+              ()-> assertTrue(sessionRepository.findById(newSession.getId()).isPresent())
+      );
     }
 
     @Test
     void incorrectPassword() {
-        var user = UserDto.builder().login(LOGIN).password("123").build();
+        var user = UserDto.builder().login(LOGIN_TEST).password("123").build();
         assertThrows(ValidationException.class, () -> registrationService.authorization(user));
     }
 
     @Test
     void incorrectLogin() {
-        var user = UserDto.builder().login(PASSWORD).password(PASSWORD).build();
+        var user = UserDto.builder().login(PASSWORD_TEST).password(PASSWORD_TEST).build();
         assertThrows(ValidationException.class, () -> registrationService.authorization(user));
     }
 

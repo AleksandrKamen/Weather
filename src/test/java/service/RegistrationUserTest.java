@@ -2,34 +2,26 @@ package service;
 
 import model.user.dto.UserDto;
 import model.user.repository.UserRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import validator.exception.ValidationException;
-
 import java.util.stream.Stream;
-
 import static org.junit.jupiter.api.Assertions.*;
-
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class RegistrationUserTest {
-    RegistrationService registrationService;
-    UserRepository userRepository;
-    @BeforeEach
-    void init() {
-        registrationService = new RegistrationService();
-        userRepository = new UserRepository();
-    }
+   private RegistrationService registrationService;
+   private UserRepository userRepository;
 
-    @AfterEach
-    void drop() {
-        registrationService = null;
-        userRepository = null;
-    }
-
+   @BeforeAll
+   void init() {
+       registrationService = new RegistrationService();
+       userRepository = new UserRepository();
+   }
     @ParameterizedTest
     @MethodSource("service.RegistrationUserTest#getRightNewUsers")
     void registrationSuccessful(UserDto newUser) {
