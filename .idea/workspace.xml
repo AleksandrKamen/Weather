@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="change navbar href title">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/components/head.html" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="add head.html and index for login in UserEntity, update AuthorizationUserTest and RegistrationUserTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/authorization.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/location.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -461,7 +452,7 @@
       <workItem from="1708625774279" duration="3355000" />
       <workItem from="1708682315519" duration="5543000" />
       <workItem from="1708752925208" duration="2279000" />
-      <workItem from="1708758171500" duration="8247000" />
+      <workItem from="1708758171500" duration="8855000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -767,7 +758,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708627105416</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add head.html and index for login in UserEntity, update AuthorizationUserTest and RegistrationUserTest">
+      <option name="closed" value="true" />
+      <created>1708766528442</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1708766528442</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -785,7 +784,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added application.properties, PropertiesUtil, WeatherAPIService, log4j.xml" />
     <MESSAGE value="added RegistrationService" />
     <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
     <MESSAGE value="added main.css, servlets" />
@@ -810,7 +808,8 @@
     <MESSAGE value="added Dockerfile and docker-compose.yml" />
     <MESSAGE value="added volume ind docker-compose.yml, final fixes" />
     <MESSAGE value="change navbar href title" />
-    <option name="LAST_COMMIT_MESSAGE" value="change navbar href title" />
+    <MESSAGE value="add head.html and index for login in UserEntity, update AuthorizationUserTest and RegistrationUserTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add head.html and index for login in UserEntity, update AuthorizationUserTest and RegistrationUserTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

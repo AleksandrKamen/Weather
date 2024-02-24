@@ -68,7 +68,7 @@
 
         togglePasswordButtons.forEach(function (button) {
             button.addEventListener('click', function () {
-                const passwordInput = button.previousElementSibling; // assuming the input is just before the button
+                const passwordInput = button.previousElementSibling;
                 const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
                 passwordInput.setAttribute('type', type);
                 button.textContent = type === 'password' ? 'Показать' : 'Скрыть';
@@ -79,9 +79,12 @@
 
 <script>
     function disableButton(button) {
-        button.innerHTML = 'Регистрация';
-        button.form.submit();
-        button.disabled = true;
+        var checkbox = document.getElementById('terms-and-conditions');
+        if (checkbox.checked){
+            button.innerHTML = 'Регистрация';
+            button.form.submit();
+            button.disabled = true;
+        }
       }
 </script>
 
