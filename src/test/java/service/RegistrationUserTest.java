@@ -14,8 +14,8 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class RegistrationUserTest {
-   private RegistrationService registrationService;
-   private UserRepository userRepository;
+   RegistrationService registrationService;
+   UserRepository userRepository;
 
    @BeforeAll
    void init() {

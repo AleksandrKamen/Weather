@@ -11,6 +11,9 @@
 <!--location-card-->
 <section class="main-content">
     <div class="container">
+        <div th:if="${foundLocations == null || foundLocations.size() == 0}" class="d-flex justify-content-center align-items-center">
+            <span class="errors">По вашему запросу ничего не найдено. Попробуйте изменить условия поиска.</span>
+        </div>
         <div class="row">
             <div th:each="location : ${foundLocations}" class="col-lg-4 .col-sm-6 mb-3">
                 <div class="location-card">
@@ -29,7 +32,7 @@
                             <input type="hidden" name="name" th:value="${location.name}"/>
                             <input type="hidden" name="latitude" th:value="${location.latitude}"/>
                             <input type="hidden" name="longitude" th:value="${location.longitude}"/>
-                            <button type="submit" class="btn btn-primary w-100">Add</button>
+                            <button type="submit" class="btn btn-primary w-100">Добавить</button>
                         </form>
                     </div>
                 </div>

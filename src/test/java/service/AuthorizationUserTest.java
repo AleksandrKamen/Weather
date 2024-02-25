@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AuthorizationUserTest {
-    private RegistrationService registrationService;
-    private SessionRepository sessionRepository;
-    private static String LOGIN_TEST = "login";
-    private static String PASSWORD_TEST = "password";
+    RegistrationService registrationService;
+    SessionRepository sessionRepository;
+    static String LOGIN_TEST = "login";
+    static String PASSWORD_TEST = "password";
 
     @BeforeAll
      void init() {

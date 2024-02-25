@@ -18,13 +18,11 @@ public class RegistrationUserValidator implements Validator<UserDto> {
                 validationResult.add(Error.of(400, "Имя пользователя не задано"));
             }
             if (object.getLogin().contains(" ")) {
-                validationResult.add(Error.of(400, "Имя пользователя содержит пробелы"));
+                validationResult.add(Error.of(400, "Имя пользователя не должно содержать пробелы"));
             }
-            if (object.getLogin().length() < 3 ) {
-                validationResult.add(Error.of(400, "Имя пользователя слишком короткое"));
-            }
-            if (object.getLogin().length() > 20) {
-                validationResult.add(Error.of(400, "Имя пользователя слишком длинное"));
+            if (object.getLogin().length() < 3 || object.getLogin().length() >20) {
+                validationResult.add(Error.of(400, "Имя пользователя должено содержать от 3 до 20 символов. " +
+                        "Пожалуйста, введите имя соответствующее этому диапазону"));
             }
         }
          if(userRepository.findByLoginWithSession(object.getLogin()).isPresent()) {
@@ -32,25 +30,23 @@ public class RegistrationUserValidator implements Validator<UserDto> {
         }
 
         //password
-        if (!object.getPassword().matches("^[a-zA-Z0-9]{3,10}$")) {
+        if (!object.getPassword().matches("^[^\\s]{3,10}$")) {
             if (object.getPassword() == null || object.getPassword().isEmpty()) {
                 validationResult.add(Error.of(400, "Пароль не задан"));
             }
             if (object.getPassword().contains(" ")) {
-                validationResult.add(Error.of(400, "Пароль содержит пробелы"));
+                validationResult.add(Error.of(400, "Пароль не должен содержать пробелы"));
             }
             if (object.getPassword().length() < 3 || object.getPassword().length() > 10) {
-                validationResult.add(Error.of(400, "Пароль не соответсвует необходимой длине"));
-            }
-            if (object.getPassword().replaceAll("[a-zA-Z\\d]", "").length() != 0) {
-                validationResult.add(Error.of(400, "В пароле присутсвтуют спец символы"));
+                validationResult.add(Error.of(400, "Пароль должено содержать от 3 до 10 символов. " +
+                        "Пожалуйста, введите пароль соответствующий этому диапазону"));
             }
         }
         if (object.getPassword().equals(object.getLogin())) {
             validationResult.add(Error.of(400, "Пароль не может совпадать с именем пользователя"));
         }
         if (!object.getPassword().equals(object.getConfirmPassword())){
-            validationResult.add(Error.of(400, "Подтвердите пароль"));
+            validationResult.add(Error.of(400, "Пароль и проверочный пароль не совпадают"));
         }
         return validationResult;
     }
