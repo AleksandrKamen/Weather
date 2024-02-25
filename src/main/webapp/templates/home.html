@@ -61,6 +61,9 @@
             </div>
         </div>
     </div>
+    <div th:if="${locationRepeat}" class="d-flex justify-content-center align-items-center">
+        <span th:text="'Локация: ' +  ${locationRepeat} + ' - уже добавлена'" class="errors"></span>
+    </div>
 </section>
 <!--location-card-->
 

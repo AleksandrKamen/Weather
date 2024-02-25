@@ -13,12 +13,8 @@ public class AuthorizationUserValidator implements Validator<UserDto> {
     public ValidationResult isValid(UserDto object) {
         var validationResult = new ValidationResult();
         var mabyUser = userRepository.findByLoginWithSession(object.getLogin());
-        if (mabyUser.isPresent()){
-            if (!BCrypt.checkpw(object.getPassword(), mabyUser.get().getPassword())){
-                validationResult.add(Error.of(400, "Пароль введен неверно"));
-            }
-        } else {
-            validationResult.add(Error.of(404, "Пользователь с указанным именем не найден"));
+        if (!mabyUser.isPresent() || !BCrypt.checkpw(object.getPassword(), mabyUser.get().getPassword())){
+          validationResult.add(Error.of(400, "Пользователь с указанным именем не найден или пароль введен неверно"));
         }
         return validationResult;
     }

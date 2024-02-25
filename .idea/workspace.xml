@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="fixed I'm not a robot checkbox" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="fixed null state">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="new-Branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,35 +92,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Сан/IdeaProjects/Docker2&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.1976378&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.31932774&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "updatedBranch",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Docker2",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.1976378",
+    "project.structure.side.proportion": "0.31932774",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Сан\IdeaProjects\Weather_project\src\main\resources" />
@@ -141,7 +148,7 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationUserTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
     <configuration name="AuthorizationUserTest.authorizationSuccessful" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -234,28 +241,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="registrationFailed.userDuplication" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;service.RegistrationUserTest$registrationFailed.userDuplication&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+    <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main/java/test.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.1.15" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.15" ALTERNATIVE_JRE_ENABLED="false">
@@ -349,18 +335,18 @@
     <list>
       <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
       <item itemvalue="Gradle.RegistrationUserTest" />
-      <item itemvalue="Gradle.registrationFailed.userDuplication" />
       <item itemvalue="Gradle.Weather_project [test]" />
       <item itemvalue="Gradle.Weather_project [build]" />
+      <item itemvalue="HTTP Request.test | #1" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.test | #1" />
         <item itemvalue="Gradle.RegistrationUserTest" />
         <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
         <item itemvalue="Gradle.Weather_project [test]" />
         <item itemvalue="Gradle.Weather_project [build]" />
-        <item itemvalue="Gradle.registrationFailed.userDuplication" />
       </list>
     </recent_temporary>
   </component>
@@ -464,6 +450,8 @@
       <workItem from="1708682315519" duration="5543000" />
       <workItem from="1708752925208" duration="2279000" />
       <workItem from="1708758171500" duration="9291000" />
+      <workItem from="1708770011649" duration="1126000" />
+      <workItem from="1708848278180" duration="6516000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -793,7 +781,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708767395784</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fixed null state">
+      <option name="closed" value="true" />
+      <created>1708770348469</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1708770348469</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -811,7 +807,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added ThymeleafListener and ThymeleafUtil" />
     <MESSAGE value="added main.css, servlets" />
     <MESSAGE value="bugs fixed in WeatherAPIService, add RegistrationServlet, HomePageServlet, footer" />
     <MESSAGE value="add getWindDirection in WeatherAPIService, create SelectedLocationServlet" />
@@ -836,7 +831,8 @@
     <MESSAGE value="change navbar href title" />
     <MESSAGE value="add head.html and index for login in UserEntity, update AuthorizationUserTest and RegistrationUserTest" />
     <MESSAGE value="fixed I'm not a robot checkbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed I'm not a robot checkbox" />
+    <MESSAGE value="fixed null state" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed null state" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

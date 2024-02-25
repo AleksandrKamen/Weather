@@ -29,6 +29,8 @@ public class HomePageServlet extends BaseServlet {
                     locationDto.setWeatherDto(weatherForLocation);
                 });
                 context.setVariable("locations", userLocations);
+                context.setVariable("locationRepeat",req.getSession().getAttribute("locationRepeat"));
+                req.getSession().removeAttribute("locationRepeat");
                 log.info("Processing home page");
             } else {
                 log.info("User not found, processing home page");

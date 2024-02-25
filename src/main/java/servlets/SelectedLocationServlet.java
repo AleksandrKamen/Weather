@@ -54,6 +54,7 @@ public class SelectedLocationServlet extends BaseServlet {
                 resp.sendRedirect(req.getContextPath() + "/");
             } catch (LocationAlreadyExistsException existsException) {
                 log.info("location {} has already been added by the user, redirect to home page", newLocation.getName());
+                req.getSession().setAttribute("locationRepeat",locationDto.getName());
                 resp.sendRedirect(req.getContextPath() + "/");
             } catch (Exception e){
                 log.error("Error {} in home page, method doGet", e.getMessage());
