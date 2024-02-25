@@ -68,7 +68,7 @@ public class RegistrationService {
     private static Session buildNewSession(User newUser) {
         var newSession = Session.builder()
                 .user(newUser)
-                .expiresat(
+                .expiresAt(
                     LocalDateTime.now().plusMinutes(Long.parseLong(PropertiesUtil.get(SESSION_TIME_KEY)))
                 )
                 .build();

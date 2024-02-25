@@ -2,6 +2,7 @@ package model.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import model.location.entity.Location;
 import model.session.entity.Session;
 import java.util.ArrayList;
@@ -15,20 +16,21 @@ import java.util.List;
 @Builder
 @ToString(exclude = {"locations","sessions"})
 @Table(name = "users", indexes = {@Index(name = "idx_login", columnList = "login")})
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    Long id;
     @Column(name = "login", unique = true, nullable = false)
-    private String login;
+    String login;
     @Column(name = "password", nullable = false)
-    private String password;
+    String password;
     @Builder.Default
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Location> locations = new ArrayList<>();
+    List<Location> locations = new ArrayList<>();
     @Builder.Default
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Session> sessions = new ArrayList<>();
+    List<Session> sessions = new ArrayList<>();
 
     public void addSession(Session session){
         sessions.add(session);

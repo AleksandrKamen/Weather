@@ -15,7 +15,7 @@ public class SessionRepository extends BaseRepository<Session,String> {
         Transaction transaction = null;
         try (var session = HibernateUtil.getSession()) {
            transaction =  session.beginTransaction();
-            var query = session.createQuery("delete from Session where expiresat < :now");
+            var query = session.createQuery("delete from Session where expiresAt < :now");
             query.setParameter("now",LocalDateTime.now());
             query.executeUpdate();
             session.getTransaction().commit();

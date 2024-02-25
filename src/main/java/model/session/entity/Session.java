@@ -2,6 +2,7 @@ package model.session.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import model.user.entity.User;
 import java.time.LocalDateTime;
 
@@ -12,13 +13,14 @@ import java.time.LocalDateTime;
 @Entity
 @Builder
 @Table(name = "sessions")
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Session {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    String id;
     @Column(name = "expiresat", nullable = false)
-    private LocalDateTime expiresat;
+    LocalDateTime expiresAt;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User user;
+    User user;
 }

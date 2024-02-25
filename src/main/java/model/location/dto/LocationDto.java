@@ -3,6 +3,7 @@ package model.location.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import model.weather.WeatherDto;
 
 @Getter
@@ -12,18 +13,19 @@ import model.weather.WeatherDto;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode(of = {"latitude","longitude"})
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class LocationDto {
-    private Long id;
+    Long id;
     @JsonProperty("name")
-    private String name;
+    String name;
     @JsonProperty("lat")
-    private Double latitude;
+    Double latitude;
     @JsonProperty("lon")
-    private Double longitude;
+    Double longitude;
     @JsonProperty("country")
-    private String country;
+    String country;
     @JsonProperty("state")
-    private String state;
-    private WeatherDto weatherDto;
+    String state;
+    WeatherDto weatherDto;
 
 }

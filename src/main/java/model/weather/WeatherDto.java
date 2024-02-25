@@ -2,10 +2,9 @@ package model.weather;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
 import java.util.Map;
 
 @NoArgsConstructor
@@ -13,17 +12,18 @@ import java.util.Map;
 @Getter
 @Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class WeatherDto {
     @JsonProperty("name")
-    private String name;
+    String name;
     @JsonProperty("weather")
-    private Map<String, Object>[] weather;
+    Map<String, Object>[] weather;
     @JsonProperty("main")
-    private Map<String, Object> main;
+    Map<String, Object> main;
     @JsonProperty("wind")
-    private Map<String, Object> wind;
+    Map<String, Object> wind;
     @JsonProperty("timezone")
-    private Long timezone;
-    private String windDirection;
-    private String currentTime;
+    Long timezone;
+    String windDirection;
+    String currentTime;
 }

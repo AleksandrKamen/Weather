@@ -11,7 +11,7 @@ public class SessionService {
         sessionRepository.deleteSessionsIfTimeIsUp();
     }
     public boolean isSessionExpired(Session session){
-        return session.getExpiresat().isAfter(LocalDateTime.now());
+        return session.getExpiresAt().isAfter(LocalDateTime.now());
     }
     public Optional<Session> getSessionById(String id){
         return sessionRepository.findById(id);
