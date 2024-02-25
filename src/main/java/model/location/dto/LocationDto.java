@@ -12,7 +12,6 @@ import model.weather.WeatherDto;
 @AllArgsConstructor
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-@EqualsAndHashCode(of = {"latitude","longitude"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class LocationDto {
     Long id;

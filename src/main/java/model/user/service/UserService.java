@@ -3,6 +3,7 @@ package model.user.service;
 import model.location.entity.Location;
 import model.user.entity.User;
 import model.user.repository.UserRepository;
+import org.hibernate.HibernateException;
 import validator.exception.LocationAlreadyExistsException;
 
 import java.util.Optional;
@@ -14,14 +15,10 @@ public class UserService {
         return userRepository.findUserBySession(sessionId);
     }
     public void addLocation(User user, Location location) {
-        var optionalLocation = user.getLocations().stream().filter(
-                locationEntity -> locationEntity.getLatitude().equals(location.getLatitude())
-                  && locationEntity.getLongitude().equals(location.getLongitude())
-                ).findFirst();
-        if (!optionalLocation.isPresent()){
+        try {
             user.addLocation(location);
             userRepository.update(user);
-        } else {
+        } catch (HibernateException hibernateException){
             throw new LocationAlreadyExistsException("Location has already been added");
         }
     }
