@@ -3,10 +3,10 @@ package service;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.session.entity.SessionEntity;
+import model.session.entity.Session;
 import model.session.repository.SessionRepository;
 import model.user.dto.UserDto;
-import model.user.entity.UserEntity;
+import model.user.entity.User;
 import model.user.mapper.CreateUserMapper;
 import model.user.repository.UserRepository;
 import util.PropertiesUtil;
@@ -25,7 +25,7 @@ public class RegistrationService {
     private  final RegistrationUserValidator registrationUserValidator = new RegistrationUserValidator();
     private final AuthorizationUserValidator authorizationUserValidator = new AuthorizationUserValidator();
 
-    public SessionEntity registration(UserDto userDto) {
+    public Session registration(UserDto userDto) {
         var validationResult = registrationUserValidator.isValid(userDto);
         if (!validationResult.isValid()) {
             throw new ValidationException(validationResult.getErrors());
@@ -37,7 +37,7 @@ public class RegistrationService {
         return newSession;
        }
 
-    public SessionEntity authorization(UserDto userDto) {
+    public Session authorization(UserDto userDto) {
         var validationResult = authorizationUserValidator.isValid(userDto);
         if (!validationResult.isValid()){
             throw new ValidationException(validationResult.getErrors());
@@ -49,7 +49,7 @@ public class RegistrationService {
         return newSession;
     }
 
-    public void setCookies(HttpServletResponse response, SessionEntity session){
+    public void setCookies(HttpServletResponse response, Session session){
         var sessionIdCookie = new Cookie(SESSION_ID, session.getId());
         response.addCookie(sessionIdCookie);
     }
@@ -65,8 +65,8 @@ public class RegistrationService {
             response.addCookie(deleteCookie);
         }
     }
-    private static SessionEntity buildNewSession(UserEntity newUser) {
-        var newSession = SessionEntity.builder()
+    private static Session buildNewSession(User newUser) {
+        var newSession = Session.builder()
                 .user(newUser)
                 .expiresat(
                     LocalDateTime.now().plusMinutes(Long.parseLong(PropertiesUtil.get(SESSION_TIME_KEY)))

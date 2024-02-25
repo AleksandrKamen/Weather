@@ -1,21 +1,21 @@
 package model.session.repository;
 
-import model.session.entity.SessionEntity;
+import model.session.entity.Session;
 import org.hibernate.HibernateException;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
 import java.time.LocalDateTime;
 
-public class SessionRepository extends BaseRepository<SessionEntity,String> {
+public class SessionRepository extends BaseRepository<Session,String> {
     public SessionRepository() {
-        super(SessionEntity.class);
+        super(Session.class);
     }
     public void deleteSessionsIfTimeIsUp(){
         Transaction transaction = null;
         try (var session = HibernateUtil.getSession()) {
            transaction =  session.beginTransaction();
-            var query = session.createQuery("delete from SessionEntity where expiresat < :now");
+            var query = session.createQuery("delete from Session where expiresat < :now");
             query.setParameter("now",LocalDateTime.now());
             query.executeUpdate();
             session.getTransaction().commit();

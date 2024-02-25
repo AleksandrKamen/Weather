@@ -1,12 +1,12 @@
 package model.user.mapper;
 
 import model.user.dto.UserDto;
-import model.user.entity.UserEntity;
+import model.user.entity.User;
 import util.mapper.Mapper;
 
-public class ReadUserMapper implements Mapper<UserEntity, UserDto> {
+public class ReadUserMapper implements Mapper<User, UserDto> {
     @Override
-    public UserDto mapFrom(UserEntity object) {
+    public UserDto mapFrom(User object) {
         return UserDto.builder()
                 .login(object.getLogin())
                 .build();

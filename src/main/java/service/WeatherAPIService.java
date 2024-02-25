@@ -2,7 +2,7 @@ package service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.Weather.WeatherDto;
+import model.weather.WeatherDto;
 import model.location.dto.LocationDto;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.config.RequestConfig;

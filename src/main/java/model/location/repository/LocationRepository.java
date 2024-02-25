@@ -1,19 +1,19 @@
 package model.location.repository;
 
-import model.location.entity.LocationEntity;
+import model.location.entity.Location;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
 import java.util.List;
 
-public class LocationRepository extends BaseRepository<LocationEntity,Long> {
+public class LocationRepository extends BaseRepository<Location,Long> {
     public LocationRepository() {
-        super(LocationEntity.class);
+        super(Location.class);
     }
 
-    public List<LocationEntity> findLocationsByUserLogin(String login){
+    public List<Location> findLocationsByUserLogin(String login){
         try (var session = HibernateUtil.getSession()) {
             session.beginTransaction();
-            var query = session.createQuery("select l from LocationEntity l JOIN FETCH l.user u where u.login = :login", LocationEntity.class);
+            var query = session.createQuery("select l from Location l JOIN FETCH l.user u where u.login = :login", Location.class);
             query.setParameter("login", login);
             var resultList = query.getResultList();
             session.getTransaction().commit();

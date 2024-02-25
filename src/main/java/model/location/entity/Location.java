@@ -2,7 +2,7 @@ package model.location.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import model.user.entity.UserEntity;
+import model.user.entity.User;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,7 +11,7 @@ import model.user.entity.UserEntity;
 @Entity
 @Builder
 @Table(name = "locations")
-public class LocationEntity {
+public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class LocationEntity {
     private String name;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private UserEntity user;
+    private User user;
     @Column(name = "latitude", nullable = false)
     private Double latitude;
     @Column(name = "longitude", nullable = false)

@@ -2,13 +2,13 @@ package model.user.mapper;
 
 import model.user.dto.UserDto;
 import org.mindrot.jbcrypt.BCrypt;
-import model.user.entity.UserEntity;
+import model.user.entity.User;
 import util.mapper.Mapper;
 
-public class CreateUserMapper implements Mapper<UserDto, UserEntity> {
+public class CreateUserMapper implements Mapper<UserDto, User> {
     @Override
-    public UserEntity mapFrom(UserDto object) {
-            return UserEntity.builder()
+    public User mapFrom(UserDto object) {
+            return User.builder()
                     .login(object.getLogin())
                     .password(BCrypt.hashpw(object.getPassword(),BCrypt.gensalt()))
                     .build();

@@ -2,8 +2,8 @@ package model.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import model.location.entity.LocationEntity;
-import model.session.entity.SessionEntity;
+import model.location.entity.Location;
+import model.session.entity.Session;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 @Builder
 @ToString(exclude = {"locations","sessions"})
 @Table(name = "users", indexes = {@Index(name = "idx_login", columnList = "login")})
-public class UserEntity {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,16 +25,16 @@ public class UserEntity {
     private String password;
     @Builder.Default
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<LocationEntity> locations = new ArrayList<>();
+    private List<Location> locations = new ArrayList<>();
     @Builder.Default
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<SessionEntity> sessions = new ArrayList<>();
+    private List<Session> sessions = new ArrayList<>();
 
-    public void addSession(SessionEntity session){
+    public void addSession(Session session){
         sessions.add(session);
         session.setUser(this);
     }
-    public void addLocation(LocationEntity location){
+    public void addLocation(Location location){
         locations.add(location);
         location.setUser(this);
     }

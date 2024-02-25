@@ -101,12 +101,6 @@ class RegistrationUserTest {
                         .login("test")
                         .password("test")
                         .confirmPassword("test")
-                        .build()),
-                // password has invalid characters
-                Arguments.of(UserDto.builder()
-                        .login("test")
-                        .password("test!")
-                        .confirmPassword("test!")
                         .build())
         );
     }

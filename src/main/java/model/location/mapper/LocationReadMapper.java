@@ -1,12 +1,12 @@
 package model.location.mapper;
 
 import model.location.dto.LocationDto;
-import model.location.entity.LocationEntity;
+import model.location.entity.Location;
 import util.mapper.Mapper;
 
-public class LocationReadMapper implements Mapper<LocationEntity, LocationDto> {
+public class LocationReadMapper implements Mapper<Location, LocationDto> {
     @Override
-    public LocationDto mapFrom(LocationEntity object) {
+    public LocationDto mapFrom(Location object) {
         return LocationDto.builder()
                 .id(object.getId())
                 .name(object.getName())
