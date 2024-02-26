@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added message in home page if location Repeat, change AuthorizationUserValidator message">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/picture/oblaka_nebo_home_page.jpg" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added uniqueConstraints for Location">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationCreateMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationReadMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/mapper/CreateUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/mapper/ReadUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/mapper/Mapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/components/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/components/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/location.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/search_locations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/AuthorizationUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/RegistrationUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +109,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "updatedBranch",
-    "last_opened_file_path": "C:/Users/Weather_project/src/main/webapp/static/picture",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/demo3",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -116,7 +119,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.1976378",
     "project.structure.side.proportion": "0.31932774",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -223,7 +226,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Weather_project [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Weather_project [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -234,7 +237,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -337,20 +340,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.Weather_project [clean]" />
       <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
       <item itemvalue="Gradle.RegistrationUserTest" />
-      <item itemvalue="Gradle.Weather_project [test]" />
       <item itemvalue="Gradle.Weather_project [build]" />
       <item itemvalue="HTTP Request.test | #1" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.15" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Weather_project [clean]" />
+        <item itemvalue="Gradle.Weather_project [build]" />
         <item itemvalue="HTTP Request.test | #1" />
         <item itemvalue="Gradle.RegistrationUserTest" />
         <item itemvalue="Gradle.AuthorizationUserTest.authorizationSuccessful" />
-        <item itemvalue="Gradle.Weather_project [test]" />
-        <item itemvalue="Gradle.Weather_project [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -456,6 +459,8 @@
       <workItem from="1708758171500" duration="9291000" />
       <workItem from="1708770011649" duration="1126000" />
       <workItem from="1708848278180" duration="9781000" />
+      <workItem from="1708931272603" duration="1486000" />
+      <workItem from="1708952551600" duration="4108000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -845,6 +850,21 @@
     <MESSAGE value="fixed null state" />
     <MESSAGE value="added message in home page if location Repeat, change AuthorizationUserValidator message" />
     <option name="LAST_COMMIT_MESSAGE" value="added message in home page if location Repeat, change AuthorizationUserValidator message" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/model/location/mapper/LocationMapper.java</url>
+          <line>14</line>
+          <properties class="model.location.mapper.LocationMapper" method="locationToLocationDto">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,17 +1,16 @@
 package service;
 
 import model.location.dto.LocationDto;
-import model.location.mapper.LocationReadMapper;
+import model.location.mapper.LocationMapper;
 import model.location.repository.LocationRepository;
 import java.util.List;
 
 public class LocationService {
     private final LocationRepository locationsRepository = new LocationRepository();
-    private final LocationReadMapper locationsMapper = new LocationReadMapper();
 
     public List<LocationDto> getLocationsByUserLogin(String login) {
         var locationsByUser = locationsRepository.findLocationsByUserLogin(login);
-        return locationsByUser.stream().map(locationsMapper::mapFrom).toList();
+        return locationsByUser.stream().map(LocationMapper.INSTANCE::locationToLocationDto).toList();
     }
 
     public void deleteLocation(Long id) {

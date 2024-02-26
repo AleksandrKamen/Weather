@@ -7,7 +7,7 @@ import model.session.entity.Session;
 import model.session.repository.SessionRepository;
 import model.user.dto.UserDto;
 import model.user.entity.User;
-import model.user.mapper.CreateUserMapper;
+import model.user.mapper.UserMapper;
 import model.user.repository.UserRepository;
 import util.PropertiesUtil;
 import validator.exception.ValidationException;
@@ -21,7 +21,6 @@ public class RegistrationService {
     private static final String SESSION_ID = "session_id";
     private  final UserRepository userRepository = new UserRepository();
     private  final SessionRepository sessionsRepository = new SessionRepository();
-    private  final CreateUserMapper creatUserMapper = new CreateUserMapper();
     private  final RegistrationUserValidator registrationUserValidator = new RegistrationUserValidator();
     private final AuthorizationUserValidator authorizationUserValidator = new AuthorizationUserValidator();
 
@@ -30,7 +29,7 @@ public class RegistrationService {
         if (!validationResult.isValid()) {
             throw new ValidationException(validationResult.getErrors());
         }
-        var newUser = creatUserMapper.mapFrom(userDto);
+        var newUser = UserMapper.INSTANCE.userDtoToUser(userDto);
         var newSession = buildNewSession(newUser);
         newUser.getSessions().add(newSession);
         userRepository.save(newUser);

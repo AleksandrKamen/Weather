@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import model.location.dto.LocationDto;
-import model.location.mapper.LocationCreateMapper;
+import model.location.mapper.LocationMapper;
 import model.user.service.UserService;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
 import service.WeatherAPIService;
@@ -19,7 +19,6 @@ import java.io.IOException;
 public class SelectedLocationServlet extends BaseServlet {
     private final WeatherAPIService weatherAPIService = new WeatherAPIService(HttpClients.createDefault());
     private final UserService userService = new UserService();
-    private final LocationCreateMapper locationCreateMapper = new LocationCreateMapper();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -47,7 +46,7 @@ public class SelectedLocationServlet extends BaseServlet {
         if (userLogin != null) {
             var user = userService.getUserWithLocations(userLogin.toString());
             var locationDto = builLocationDto(req);
-            var newLocation = locationCreateMapper.mapFrom(locationDto);
+            var newLocation = LocationMapper.INSTANCE.locationDtoToLocation(locationDto);
             try {
                 userService.addLocation(user, newLocation);
                 log.info("location {} added to user {}, redirect to home page", newLocation.getName(), user.getLogin());
@@ -65,7 +64,6 @@ public class SelectedLocationServlet extends BaseServlet {
             resp.sendRedirect(req.getContextPath() + "/");
         }
     }
-
 
     private LocationDto builLocationDto(HttpServletRequest req){
         var locationName = req.getParameter("name");
