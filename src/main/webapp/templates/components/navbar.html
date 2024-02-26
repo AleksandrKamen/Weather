@@ -25,10 +25,31 @@
                 </form>
                 <ul th:if="${userLogin}" class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="tooltip" th:title="${userLogin}">
+                        <a class="nav-link" href="#" data-toggle="tooltip" title="Личный кабинет" data-bs-toggle="modal" data-bs-target="#modal-cart">
                             <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-cart" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header bg-secondary text-white">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Личный кабинет</h1>
+                                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal"  aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p th:text="'Имя пользователя - ' + ${userLogin}"></p>
+                                    <p th:text="'Количество добавленных локаций - ' + ${locations.size()}"></p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
                     <li class="nav-item">
                         <form action="logOut" method="post" enctype="application/x-www-form-urlencoded"
                               class="nav-link">
