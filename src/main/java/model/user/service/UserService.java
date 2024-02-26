@@ -3,7 +3,7 @@ package model.user.service;
 import model.location.entity.Location;
 import model.user.entity.User;
 import model.user.repository.UserRepository;
-import org.hibernate.HibernateException;
+import validator.exception.DataBaseException;
 import validator.exception.LocationAlreadyExistsException;
 
 import java.util.Optional;
@@ -18,7 +18,7 @@ public class UserService {
         try {
             user.addLocation(location);
             userRepository.update(user);
-        } catch (HibernateException hibernateException){
+        } catch (DataBaseException dataBaseException){
             throw new LocationAlreadyExistsException("Location has already been added");
         }
     }

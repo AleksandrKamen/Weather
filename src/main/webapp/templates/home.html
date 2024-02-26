@@ -8,7 +8,7 @@
 <div th:insert="~{/components/navbar}"></div>
 
 <!--location-card-->
-<section class="main-content">
+<section th:class="${locations == null or locations.size() == 0}? 'main-content-empty' :'main-content'">
     <div class="container">
         <div class="row">
             <div th:each="location : ${locations}" class="col-lg-4 .col-sm-6 mb-3">
