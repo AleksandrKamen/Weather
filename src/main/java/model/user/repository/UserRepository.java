@@ -1,8 +1,11 @@
 package model.user.repository;
 
 import model.user.entity.User;
+import org.hibernate.HibernateException;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
+import validator.exception.DataBaseException;
+
 import java.util.Optional;
 
 public class UserRepository extends BaseRepository<User,Long> {
@@ -16,7 +19,9 @@ public class UserRepository extends BaseRepository<User,Long> {
            var maybeUser = query.getSingleResultOrNull();
            session.getTransaction().commit();
            return Optional.ofNullable(maybeUser);
-         }
+         } catch (HibernateException hibernateException){
+           throw new DataBaseException("Database Error");
+       }
     }
     public Optional<User> findByLoginWithLocation(String login){
        try (var session = HibernateUtil.getSession()) {
@@ -26,7 +31,9 @@ public class UserRepository extends BaseRepository<User,Long> {
            var maybeUser = query.getSingleResultOrNull();
            session.getTransaction().commit();
            return Optional.ofNullable(maybeUser);
-         }
+         } catch (HibernateException hibernateException){
+           throw new DataBaseException("Database Error");
+       }
     }
     public Optional<User> findUserBySession(String sessionId){
         try (var session = HibernateUtil.getSession()) {
@@ -36,6 +43,8 @@ public class UserRepository extends BaseRepository<User,Long> {
             var user = query.getSingleResultOrNull();
             session.getTransaction().commit();
             return Optional.ofNullable(user);
+        } catch (HibernateException hibernateException){
+            throw new DataBaseException("Database Error");
         }
     }
  }

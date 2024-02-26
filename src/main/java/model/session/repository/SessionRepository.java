@@ -23,7 +23,7 @@ public class SessionRepository extends BaseRepository<Session,String> {
             if (transaction.isActive()){
                 transaction.rollback();
             }
-            throw new HibernateException("Удалить не удалось");
+            throw new HibernateException("failed to delete");
         }
     }
 }

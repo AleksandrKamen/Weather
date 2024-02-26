@@ -16,9 +16,19 @@ public class DeleteLocationServlet extends BaseServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            var userLogin = context.getVariable("userLogin");
+            var locations = locationsService.getLocationsByUserLogin(userLogin.toString());
             var locationId = req.getParameter("locationId");
-            log.info("location with id: {} deleted",locationId);
-            locationsService.deleteLocation(Long.valueOf(locationId));
+
+            if (locations.stream()
+                    .filter(locationDto -> locationDto.getId() == Long.valueOf(locationId))
+                    .findFirst()
+                    .isPresent()){
+                log.info("location with id: {} deleted",locationId);
+                locationsService.deleteLocation(Long.valueOf(locationId));
+            } else {
+                log.info("user {} cannot delete location {}",userLogin, locationId);
+            }
             resp.sendRedirect(req.getContextPath() + "/");
         } catch (NumberFormatException numberFormatException){
             log.error("Error parsing location ID: {}", req.getParameter("locationId"));
