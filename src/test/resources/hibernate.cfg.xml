@@ -14,8 +14,8 @@
 <!--        <property name="show_sql">true</property>-->
         <property name="format_sql">true</property>
 
-        <mapping class="model.user.entity.UserEntity"/>
-        <mapping class="model.location.entity.LocationEntity"/>
-        <mapping class="model.session.entity.SessionEntity"/>
+        <mapping class="model.user.entity.User"/>
+        <mapping class="model.location.entity.Location"/>
+        <mapping class="model.session.entity.Session"/>
     </session-factory>
 </hibernate-configuration>

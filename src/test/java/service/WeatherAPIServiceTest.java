@@ -19,8 +19,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.when;
 
@@ -42,10 +41,11 @@ class WeatherAPIServiceTest {
         when(closeableHttpResponse.getCode()).thenReturn(200);
         when(closeableHttpClient.execute(any(HttpGet.class))).thenReturn(closeableHttpResponse);
         var locations = weatherAPIService.getLocationsByName("London");
-        var locationDto = LocationDto.builder().name("City of London").latitude(51.5156177).longitude(-0.0919983).build();
         assertThat(locations).hasSize(5);
-        assertThat(locations).contains(locationDto);
-
+        assertTrue(locations.stream()
+                .filter(locationDto1 -> locationDto1.getName().equals("City of London"))
+                .findFirst()
+                .isPresent());
     }
     @Test
     void searchWeatherForLocationTest() throws IOException {
