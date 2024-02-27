@@ -29,7 +29,7 @@ public class LocationRepository extends BaseRepository<Location,Long> {
     public List<Location> findLocationsByUserLoginWithPagination(String login, Integer offset, Integer limit){
         try (var session = HibernateUtil.getSession()) {
             session.beginTransaction();
-            var query = session.createQuery("select l from Location l JOIN FETCH l.user u where u.login = :login", Location.class);
+            var query = session.createQuery("select l from Location l JOIN FETCH l.user u where u.login = :login order by l.id desc", Location.class);
             query.setParameter("login", login);
             query.setFirstResult(offset);
             query.setMaxResults(limit);

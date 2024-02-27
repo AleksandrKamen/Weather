@@ -21,7 +21,7 @@ body{
 .main-content-empty{
     flex: 1;
     min-height: 70vh;
-    background-image: url("/static/picture/oblaka_nebo_mostik_92817_1680x1050.jpg");
+    background-image: url("../picture/oblaka_nebo_mostik_92817_1680x1050.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:insert="~{components/head :: #head}">
     <title>Search Location</title>
-    <div th:insert="~{components/head :: #head}"></div>
 </head>
 <body>
 
@@ -52,12 +51,6 @@
 
 <!--scripts-->
 <div th:insert="~{components/head :: #bootstrapScript}"></div>
-
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').toolip();
-    });
-</script>
 <!--scripts-->
 
 </body>
