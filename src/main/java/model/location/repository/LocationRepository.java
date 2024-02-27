@@ -5,7 +5,6 @@ import org.hibernate.HibernateException;
 import util.HibernateUtil;
 import util.repository.BaseRepository;
 import validator.exception.DataBaseException;
-
 import java.util.List;
 
 public class LocationRepository extends BaseRepository<Location,Long> {
