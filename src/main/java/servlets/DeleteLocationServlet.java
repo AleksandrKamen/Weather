@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import service.LocationService;
+import model.location.service.LocationService;
 import util.servlet.BaseServlet;
 import java.io.IOException;
 

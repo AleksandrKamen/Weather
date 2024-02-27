@@ -23,6 +23,9 @@
                             <h4 class="card-title" th:text="${location.name}"></h4>
                         </a>
                         <div class="location-bottom-details">
+                            <div>
+                                <span class="me-2" th:text="'Страна: ' +  ${location.getWeatherDto().getSys().get('country')}"></span>
+                            </div>
                              <div>
                                 <span class="me-2" th:text="'Температура воздуха: ' +  ${location.getWeatherDto().getMain().get('temp')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-temperature-three-quarters"></i></a>
@@ -61,6 +64,27 @@
             </div>
         </div>
     </div>
+
+    <nav aria-label="Page navigation" th:if="${locations != null and locations.size() != 0}">
+        <ul class="pagination justify-content-center">
+            <li class="page-item" th:class="${page == 1} ? 'disabled' : ''">
+                <a class="page-link" th:href="@{'/?page='+ ${page - 1}}">Предыдущая</a>
+            </li>
+            <li th:class="${page == 1} ? 'page-item active' : 'page-item'">
+                <a class="page-link" th:href="@{/?page=1}">1</a>
+            </li>
+            <li th:if="${lastPage >= 2}" th:class="${page == 2} ? 'page-item active' : 'page-item'">
+                <a class="page-link" th:href="@{/?page=2}">2</a>
+            </li>
+            <li th:if="${lastPage >= 3}" th:class="${page == 3} ? 'page-item active' : 'page-item'">
+                <a class="page-link" th:href="@{/?page=3}">3</a>
+            </li>
+            <li class="page-item" th:class="${page == lastPage} ? 'disabled' : ''">
+                <a class="page-link" th:href="@{'/?page='+ ${page + 1}}">Следующая</a>
+            </li>
+        </ul>
+    </nav>
+
     <div th:if="${locationRepeat}" class="d-flex justify-content-center align-items-center">
         <span th:text="'Локация: ' +  ${locationRepeat} + ' - уже добавлена'" class="errors"></span>
     </div>

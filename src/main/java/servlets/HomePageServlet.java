@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
-import service.LocationService;
+import model.location.service.LocationService;
 import service.WeatherAPIService;
 import util.servlet.BaseServlet;
 import java.io.IOException;
@@ -23,12 +23,19 @@ public class HomePageServlet extends BaseServlet {
             var userLogin = context.getVariable("userLogin");
             if (userLogin != null){
                 log.info("User {} found, session id: {}", userLogin, sessionId);
-                var userLocations = locationsService.getLocationsByUserLogin(userLogin.toString());
-                userLocations.forEach(locationDto -> {
+                var parameter = req.getParameter("page");
+                var page = parameter == null || Integer.parseInt(parameter) < 1 ? 1 : Integer.parseInt(parameter);
+                var allUserLocations = locationsService.getLocationsByUserLogin(userLogin.toString());
+                var locationsWithPagination = locationsService.getLocationsByUserNameWithPagination(userLogin.toString(), page);
+                locationsWithPagination.forEach(locationDto -> {
                     var weatherForLocation = weatherAPIService.getWeatherForLocation(locationDto);
                     locationDto.setWeatherDto(weatherForLocation);
                 });
-                context.setVariable("locations", userLocations);
+
+                context.setVariable("locations", locationsWithPagination);
+                context.setVariable("lastPage", locationsService.getLastPage(allUserLocations.size()));
+                context.setVariable("page", page);
+
                 context.setVariable("locationRepeat",req.getSession().getAttribute("locationRepeat"));
                 req.getSession().removeAttribute("locationRepeat");
                 log.info("Processing home page");
