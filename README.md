@@ -1,6 +1,6 @@
 # Обзор проекта (Weather)
 
-![image](https://github.com/AleksandrKamen/Weather/assets/144233016/a07c372d-bdee-47c3-b5f2-4450b6595d37)
+![image](https://github.com/AleksandrKamen/Weather/assets/144233016/cd898e36-a788-4dac-9931-e85c1a2ab093)
 
 **Техническое задание проекта** -  [https://zhukovsd.github.io/java-backend-learning-course/Projects/TennisScoreboard/](https://zhukovsd.github.io/java-backend-learning-course/Projects/WeatherViewer/)
 
@@ -48,7 +48,7 @@
 
 1. *Стартовая страница (для незарегистрированного пользователя)* - имеется возможность перейти на страницу регистрации или авторизации. 
 
-![image](https://github.com/AleksandrKamen/Weather/assets/144233016/78fde0ff-489c-4203-a2b6-ff069052c584)
+![image](https://github.com/AleksandrKamen/Weather/assets/144233016/02324faf-46e7-4e58-8521-b2be136ffccd)
 
 2. *Страницы - регистрации и авторизации (для незарегистрированного пользователя)* - при авторизации пользователя бэкенд приложение создаёт сессию с идентификатором, и устанавливает этот идентификатор в cookies HTTP ответа, которым приложение отвечает на POST запрос формы авторизации. К тому же, сессия содержит в себе ID авторизовавшегося юзера.
 Далее, при каждом запросе к любой странице, бэкенд приложение анализирует cookies из запроса и определяет, существует ли сессия для ID из cookies. Если есть - страница рендерится для того пользователя, ID которого соответствует ID сессии из cookies.
@@ -57,17 +57,19 @@
 
 ![image](https://github.com/AleksandrKamen/Weather/assets/144233016/ae4d3223-622a-4f6f-a0b5-1e01809c1982)
 
-3. *Стартовая страница зарегистрированного пользователя (с добавленными локациями)* - содержит информацию о логине текущего пользователя,  кнопку logout, а также форму поиска локаций.
+3. *Стартовая страница зарегистрированного пользователя (с добавленными локациями)* - кнопку личного кабинета,  кнопку logout, а также форму поиска локаций.
 
-![image](https://github.com/AleksandrKamen/Weather/assets/144233016/b720ccf1-05f6-455f-a41f-8598cfd0c347)
+![image](https://github.com/AleksandrKamen/Weather/assets/144233016/eb2feb36-ea2a-44eb-b378-633da86f554f)
+
 
 4. *Страница найденных локаций по критериям поиска* - отображает до 5 найденных совпадений с критериям поиска.
 
-![image](https://github.com/AleksandrKamen/Weather/assets/144233016/80ca1599-16d3-44d6-b48d-76275d99b2af)
+![image](https://github.com/AleksandrKamen/Weather/assets/144233016/e14d9c11-0999-4ccf-a023-5c45f57116e9)
 
 5. *Страница полной информации по выбранной локаций* - содержит более подробную информацию о погоде для выбранной локации.
 
-![image](https://github.com/AleksandrKamen/Weather/assets/144233016/ec0a8e9c-44a8-4c59-8cb3-21c6d7f784aa)
+![image](https://github.com/AleksandrKamen/Weather/assets/144233016/bddaade9-9b28-4a66-a4df-54b2ba18293e)
+
 
 
 
