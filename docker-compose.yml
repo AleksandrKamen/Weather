@@ -3,7 +3,6 @@ version: '3.8'
 services:
   weather:
     image: aleksandrkamen/weather-app
-    build: .
     restart: always
     depends_on:
       - postgres_db
