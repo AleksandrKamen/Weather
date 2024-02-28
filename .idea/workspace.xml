@@ -4,14 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added order by in LocationRepository">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="5bfa6a9f-dc9f-43fd-9239-35b84077e2e0" name="Changes" comment="added env file, changed images in Dockerfile">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/entity/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/entity/Location.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/mapper/LocationMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/repository/LocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/location/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/location/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/entity/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/entity/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/repository/SessionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/session/service/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/session/service/SessionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/WeatherAPIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/AuthorizationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/DeleteLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/DeleteLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/HomePageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchLocationsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SelectedLocationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/SignOutServler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/filters/CharsetFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/listeners/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/SessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlets/listeners/ThymeleafListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/PropertiesUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ThymeleafUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/servlet/BaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/exception/DataBaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/exception/DataBaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/exception/LocationAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/exception/LocationAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherExceedingRequestsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/exception/OpenWeatherExceedingRequestsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/exception/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/exception/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/AuthorizationUserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/user/RegistrationUserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +138,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "updatedBranch",
-    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Hibernate_DMDEV",
+    "last_opened_file_path": "C:/Users/Сан/IdeaProjects/Tennis-match-scoreboard",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -153,7 +184,7 @@
       <recent name="servlets" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.15">
+  <component name="RunManager" selected="Gradle.Weather_project [clean]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Weather_project.main" />
@@ -353,8 +384,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Weather_project [clean]" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.WeatherAPIServiceTest.searchLocationsByNameTest" />
         <item itemvalue="Gradle.WeatherAPIServiceTest" />
         <item itemvalue="Gradle.RegistrationUserTest" />
@@ -471,7 +502,8 @@
       <workItem from="1709041151204" duration="153000" />
       <workItem from="1709041315940" duration="4843000" />
       <workItem from="1709057092069" duration="2918000" />
-      <workItem from="1709060572022" duration="1387000" />
+      <workItem from="1709060572022" duration="3722000" />
+      <workItem from="1709114949341" duration="2413000" />
     </task>
     <task id="LOCAL-00001" summary="delete sourceCompatibility and targetCompatibility from gradle">
       <option name="closed" value="true" />
@@ -849,7 +881,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709058298529</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="added env file, changed images in Dockerfile">
+      <option name="closed" value="true" />
+      <created>1709062133187</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1709062133187</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -867,7 +907,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added BaseServlet, components html,html pages" />
     <MESSAGE value="added Validator for UserDto and error message in RegistrationServlet and AuthorizationServlet" />
     <MESSAGE value="added error page in case of error" />
     <MESSAGE value="added BaseServlet" />
@@ -892,7 +931,8 @@
     <MESSAGE value="added Pagination in home page" />
     <MESSAGE value="fixx hibernate.cfg.xml and WeatherAPIServiceTest" />
     <MESSAGE value="added order by in LocationRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="added order by in LocationRepository" />
+    <MESSAGE value="added env file, changed images in Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="added env file, changed images in Dockerfile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

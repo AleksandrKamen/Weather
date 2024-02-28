@@ -15,7 +15,7 @@ import org.thymeleaf.web.servlet.JakartaServletWebApplication;
 @UtilityClass
 public class ThymeleafUtil {
 
-    public TemplateEngine buildTemplateEngine(ServletContext servletContext){
+    public TemplateEngine buildTemplateEngine(ServletContext servletContext) {
 
         IWebApplication webApplication = JakartaServletWebApplication.buildApplication(servletContext);
         var templateResolver = buildTemplateResolver(webApplication);
@@ -24,14 +24,14 @@ public class ThymeleafUtil {
         return templateEngine;
     }
 
-    public WebContext getServletContext(HttpServletRequest request, HttpServletResponse response){
+    public WebContext getServletContext(HttpServletRequest request, HttpServletResponse response) {
         var servletContext = request.getServletContext();
         var webApplication = JakartaServletWebApplication.buildApplication(servletContext);
-        var webExchange = webApplication.buildExchange(request,response);
+        var webExchange = webApplication.buildExchange(request, response);
         return new WebContext(webExchange);
     }
 
-    public ITemplateResolver buildTemplateResolver (IWebApplication webApplication){
+    public ITemplateResolver buildTemplateResolver(IWebApplication webApplication) {
         var templateResolver = new WebApplicationTemplateResolver(webApplication);
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setPrefix("/templates/");

@@ -1,7 +1,8 @@
-html{
+html {
     font-size: 16px;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -14,11 +15,12 @@ body{
     margin: 0;
 }
 
-.main-content{
+.main-content {
     flex: 1;
     min-height: 70vh;
 }
-.main-content-empty{
+
+.main-content-empty {
     flex: 1;
     min-height: 70vh;
     background-image: url("../picture/oblaka_nebo_mostik_92817_1680x1050.jpg");
@@ -27,30 +29,31 @@ body{
     background-position: center;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
-section{
+section {
     padding: 50px 0;
 }
 
-a{
+a {
     color: #111;
 }
-a:hover{
+
+a:hover {
     color: #555;
 }
 
 /*Header*/
-.navbar-light .navbar-nav .nav-link{
+.navbar-light .navbar-nav .nav-link {
     color: #111;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.top-menu li a::after{
+.top-menu li a::after {
     content: '';
     display: block;
     width: 100%;
@@ -59,7 +62,8 @@ a:hover{
     transition: .3s;
     transform: scale(0);
 }
-.top-menu li a:hover::after{
+
+.top-menu li a:hover::after {
     transform: scale(1);
 }
 
@@ -71,17 +75,19 @@ a:hover{
     font-size: inherit;
     color: inherit;
 }
+
 /*Header*/
 
 /*Location-card*/
-.location-card{
+.location-card {
     position: relative;
-    box-shadow:  0 2px 5px 0 rgba(0,0,0,0.100);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.100);
     transition: all .3s;
     min-height: 20vw;
     display: flex;
     flex-direction: column;
 }
+
 .current-time {
     position: absolute;
     top: 35px;
@@ -89,36 +95,41 @@ a:hover{
     padding: 5px;
 }
 
-.card-title{
+.card-title {
     text-align: center;
 }
-.location-card:hover{
-    box-shadow:  0 14px 30px -15px rgba(0,0,0,0.75);
+
+.location-card:hover {
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
 }
-.location-bottom-details{
+
+.location-bottom-details {
     font-size: 15px;
     margin-top: 20px;
     margin-left: 15px;
 }
-.location-bottom-details div{
+
+.location-bottom-details div {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
 }
-.location-card-button{
+
+.location-card-button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: auto;
 }
+
 /*Location-card*/
 
 /*Footer*/
-.footer{
+.footer {
     background-color: #343434;
 }
 
-.footer h4{
+.footer h4 {
     color: #ccc;
     text-transform: uppercase;
     font-size: 16px;
@@ -134,7 +145,8 @@ a:hover{
 .footer a, footer li {
     color: #c8c8c8;
 }
-.footer a:hover{
+
+.footer a:hover {
     color: #fff;
     text-decoration: underline;
 }
@@ -148,18 +160,19 @@ a:hover{
     margin-right: 15px;
     font-size: 20px;
 }
+
 /*Footer*/
 
 
 /*Popup message*/
-.popup-buttons{
+.popup-buttons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     font-size: 12px;
 }
 
-.btn-close{
+.btn-close {
     position: fixed;
     top: 5px;
     right: 10px;
@@ -183,10 +196,12 @@ a:hover{
     max-width: 400px;
     margin: 0 auto;
 }
+
 /*Popup message*/
 
 /*Errors*/
-.errors{
+.errors {
     color: red;
 }
+
 /*Errors*/

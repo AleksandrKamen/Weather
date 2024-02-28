@@ -9,16 +9,18 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import service.WeatherAPIService;
 import util.servlet.BaseServlet;
 import validator.exception.OpenWeatherResponseException;
+
 import java.io.IOException;
 
 @WebServlet("/search")
 @Slf4j
 public class SearchLocationsServlet extends BaseServlet {
-   private final WeatherAPIService weatherAPIService = new WeatherAPIService(HttpClients.createDefault());
+    private final WeatherAPIService weatherAPIService = new WeatherAPIService(HttpClients.createDefault());
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var userLogin = context.getVariable("userLogin");
-        if (userLogin != null){
+        if (userLogin != null) {
             try {
                 var locationName = req.getParameter("name");
                 var foundLocations = weatherAPIService.getLocationsByName(locationName);
@@ -27,7 +29,7 @@ public class SearchLocationsServlet extends BaseServlet {
             } catch (OpenWeatherResponseException responseException) {
                 log.info("Openweathermap response error, redirect to home page", responseException.getMessage());
                 resp.sendRedirect(req.getContextPath() + "/");
-            } catch (Exception e){
+            } catch (Exception e) {
                 log.error("Error {} in search page, method doGet", e.getMessage());
                 templateEngine.process("error", context, resp.getWriter());
             }

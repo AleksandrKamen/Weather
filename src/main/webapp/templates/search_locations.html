@@ -10,7 +10,8 @@
 <!--location-card-->
 <section class="main-content">
     <div class="container">
-        <div th:if="${foundLocations == null || foundLocations.size() == 0}" class="d-flex justify-content-center align-items-center">
+        <div th:if="${foundLocations == null || foundLocations.size() == 0}"
+             class="d-flex justify-content-center align-items-center">
             <span class="errors">По вашему запросу ничего не найдено. Попробуйте изменить условия поиска.</span>
         </div>
         <div class="row">

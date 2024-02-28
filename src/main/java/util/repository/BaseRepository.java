@@ -5,12 +5,13 @@ import org.hibernate.HibernateException;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 import validator.exception.DataBaseException;
-
 import java.util.Optional;
+
 @RequiredArgsConstructor
-public class BaseRepository <T, K> implements Repository<T,K>{
+public class BaseRepository<T, K> implements Repository<T, K> {
 
     private final Class<T> clazz;
+
     @Override
     public T save(T entity) {
         try (var session = HibernateUtil.getSession()) {
@@ -19,8 +20,7 @@ public class BaseRepository <T, K> implements Repository<T,K>{
                 session.beginTransaction();
                 session.persist(entity);
                 session.getTransaction().commit();
-            }
-            catch (HibernateException hibernateException) {
+            } catch (HibernateException hibernateException) {
                 if (transaction.isActive()) {
                     transaction.rollback();
                 }
@@ -28,6 +28,7 @@ public class BaseRepository <T, K> implements Repository<T,K>{
         }
         return entity;
     }
+
     @Override
     public Optional<T> findById(K id) {
         try (var session = HibernateUtil.getSession()) {
@@ -35,7 +36,7 @@ public class BaseRepository <T, K> implements Repository<T,K>{
             var mabyObject = session.get(clazz, id);
             session.getTransaction().commit();
             return Optional.ofNullable(mabyObject);
-        } catch (HibernateException hibernateException){
+        } catch (HibernateException hibernateException) {
             throw new DataBaseException("Database Error");
         }
     }
@@ -46,7 +47,7 @@ public class BaseRepository <T, K> implements Repository<T,K>{
             session.beginTransaction();
             session.merge(entity);
             session.getTransaction().commit();
-        } catch (HibernateException hibernateException){
+        } catch (HibernateException hibernateException) {
             throw new DataBaseException("Database Error");
         }
     }
@@ -58,7 +59,7 @@ public class BaseRepository <T, K> implements Repository<T,K>{
             var entity = session.get(clazz, id);
             session.remove(entity);
             session.getTransaction().commit();
-        } catch (HibernateException hibernateException){
+        } catch (HibernateException hibernateException) {
             throw new DataBaseException("Database Error");
         }
     }

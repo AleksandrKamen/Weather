@@ -12,6 +12,7 @@ import org.apache.hc.client5.http.impl.classic.HttpClients;
 import service.WeatherAPIService;
 import util.servlet.BaseServlet;
 import validator.exception.LocationAlreadyExistsException;
+
 import java.io.IOException;
 
 @WebServlet("/location")
@@ -40,6 +41,7 @@ public class SelectedLocationServlet extends BaseServlet {
             templateEngine.process("error", context, resp.getWriter());
         }
     }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var userLogin = context.getVariable("userLogin");
@@ -53,9 +55,9 @@ public class SelectedLocationServlet extends BaseServlet {
                 resp.sendRedirect(req.getContextPath() + "/");
             } catch (LocationAlreadyExistsException existsException) {
                 log.info("location {} has already been added by the user, redirect to home page", newLocation.getName());
-                req.getSession().setAttribute("locationRepeat",locationDto.getName());
+                req.getSession().setAttribute("locationRepeat", locationDto.getName());
                 resp.sendRedirect(req.getContextPath() + "/");
-            } catch (Exception e){
+            } catch (Exception e) {
                 log.error("Error {} in home page, method doGet", e.getMessage());
                 templateEngine.process("error", context, resp.getWriter());
             }
@@ -65,7 +67,7 @@ public class SelectedLocationServlet extends BaseServlet {
         }
     }
 
-    private LocationDto builLocationDto(HttpServletRequest req){
+    private LocationDto builLocationDto(HttpServletRequest req) {
         var locationName = req.getParameter("name");
         var locationLatitude = req.getParameter("latitude");
         var locationLongitude = req.getParameter("longitude");

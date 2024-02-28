@@ -28,15 +28,16 @@ public abstract class BaseServlet extends HttpServlet {
         sessionService = new SessionService();
         super.init(config);
     }
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        context = ThymeleafUtil.getServletContext(req,resp);
+        context = ThymeleafUtil.getServletContext(req, resp);
         setVariablesUserLoginAndSessionId(req);
         super.service(req, resp);
     }
 
-    protected Optional<Cookie> findCookieByName(Cookie[] cookies, String cookieName){
-        if (cookies == null || cookies.length == 0){
+    protected Optional<Cookie> findCookieByName(Cookie[] cookies, String cookieName) {
+        if (cookies == null || cookies.length == 0) {
             return Optional.empty();
         }
         return Arrays.stream(cookies).filter(cookie -> cookie.getName().equals(cookieName)).findFirst();

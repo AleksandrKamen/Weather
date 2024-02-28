@@ -1,8 +1,9 @@
 <body>
- <div th:fragment="navbar">
+<div th:fragment="navbar">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" th:href="@{/}" data-toggle="tooltip" title="Вернуться на главную страницу">Погода</a>
+            <a class="navbar-brand" th:href="@{/}" data-toggle="tooltip"
+               title="Вернуться на главную страницу">Погода</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,8 @@
                 </form>
                 <ul th:if="${userLogin}" class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="tooltip" title="Личный кабинет" data-bs-toggle="modal" data-bs-target="#modal-cart">
+                        <a class="nav-link" href="#" data-toggle="tooltip" title="Личный кабинет" data-bs-toggle="modal"
+                           data-bs-target="#modal-cart">
                             <i class="fa-solid fa-user"></i>
                         </a>
                     </li>
@@ -36,13 +38,15 @@
                             <div class="modal-content">
                                 <div class="modal-header bg-secondary text-white">
                                     <h1 class="modal-title fs-5" id="modalLabel">Личный кабинет</h1>
-                                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal"  aria-label="Close"></button>
+                                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <p th:text="'Имя пользователя - ' + ${userLogin}"></p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -59,5 +63,5 @@
             </div>
         </div>
     </nav>
- </div>
+</div>
 </body>

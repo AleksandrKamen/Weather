@@ -14,14 +14,16 @@ public class UserService {
     public Optional<User> getUserBySessionId(String sessionId) {
         return userRepository.findUserBySession(sessionId);
     }
+
     public void addLocation(User user, Location location) {
         try {
             user.addLocation(location);
             userRepository.update(user);
-        } catch (DataBaseException dataBaseException){
+        } catch (DataBaseException dataBaseException) {
             throw new LocationAlreadyExistsException("Location has already been added");
         }
     }
+
     public User getUserWithLocations(String login) {
         return userRepository.findByLoginWithLocation(login).get();
     }

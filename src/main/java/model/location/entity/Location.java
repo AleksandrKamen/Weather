@@ -11,7 +11,7 @@ import model.user.entity.User;
 @Setter
 @Entity
 @Builder
-@Table(name = "locations", uniqueConstraints = @UniqueConstraint(columnNames = {"user_id","latitude","longitude"}))
+@Table(name = "locations", uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "latitude", "longitude"}))
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Location {
 

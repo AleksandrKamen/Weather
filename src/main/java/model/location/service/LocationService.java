@@ -22,11 +22,11 @@ public class LocationService {
         locationsRepository.delete(id);
     }
 
-    public List<LocationDto> getLocationsByUserNameWithPagination(String login, Integer page){
+    public List<LocationDto> getLocationsByUserNameWithPagination(String login, Integer page) {
         var offset = page * LOCATIONS_LIMIT_PER_PAGE - LOCATIONS_LIMIT_PER_PAGE;
         var locations = locationsRepository.findLocationsByUserLoginWithPagination(login, offset, LOCATIONS_LIMIT_PER_PAGE);
-        if (!locations.isEmpty()){
-           return locations.stream().map(LocationMapper.INSTANCE::locationToLocationDto).toList();
+        if (!locations.isEmpty()) {
+            return locations.stream().map(LocationMapper.INSTANCE::locationToLocationDto).toList();
         }
         return Collections.emptyList();
     }

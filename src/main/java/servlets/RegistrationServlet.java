@@ -9,7 +9,9 @@ import model.user.dto.UserDto;
 import service.RegistrationService;
 import util.servlet.BaseServlet;
 import validator.exception.ValidationException;
+
 import java.io.IOException;
+
 @Slf4j
 @WebServlet("/registration")
 public class RegistrationServlet extends BaseServlet {
@@ -17,14 +19,15 @@ public class RegistrationServlet extends BaseServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            try {
-                log.info("Processing registration page");
-                templateEngine.process("registration", context, resp.getWriter());
-            } catch (Exception e){
-                log.error("Error {} in registration page, method doGet",  e.getMessage());
-                templateEngine.process("error", context, resp.getWriter());
-            }
+        try {
+            log.info("Processing registration page");
+            templateEngine.process("registration", context, resp.getWriter());
+        } catch (Exception e) {
+            log.error("Error {} in registration page, method doGet", e.getMessage());
+            templateEngine.process("error", context, resp.getWriter());
+        }
     }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
@@ -37,8 +40,8 @@ public class RegistrationServlet extends BaseServlet {
             log.info("Validation error during registration: {}", validationException.getErrors());
             context.setVariable("errors", validationException.getErrors());
             templateEngine.process("registration", context, resp.getWriter());
-        } catch (Exception e){
-            log.error("Error {} in registration page, method doPost",  e.getMessage());
+        } catch (Exception e) {
+            log.error("Error {} in registration page, method doPost", e.getMessage());
             templateEngine.process("error", context, resp.getWriter());
         }
     }

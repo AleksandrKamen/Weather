@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import model.location.entity.Location;
 import model.session.entity.Session;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @Setter
 @Entity
 @Builder
-@ToString(exclude = {"locations","sessions"})
+@ToString(exclude = {"locations", "sessions"})
 @Table(name = "users", indexes = {@Index(name = "idx_login", columnList = "login")})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
@@ -26,17 +27,18 @@ public class User {
     @Column(name = "password", nullable = false)
     String password;
     @Builder.Default
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     List<Location> locations = new ArrayList<>();
     @Builder.Default
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     List<Session> sessions = new ArrayList<>();
 
-    public void addSession(Session session){
+    public void addSession(Session session) {
         sessions.add(session);
         session.setUser(this);
     }
-    public void addLocation(Location location){
+
+    public void addLocation(Location location) {
         locations.add(location);
         location.setUser(this);
     }

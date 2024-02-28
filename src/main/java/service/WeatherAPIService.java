@@ -2,8 +2,8 @@ package service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.weather.WeatherDto;
 import model.location.dto.LocationDto;
+import model.weather.WeatherDto;
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.config.RequestConfig;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
@@ -12,6 +12,7 @@ import util.PropertiesUtil;
 import validator.exception.OpenWeatherExceedingRequestsException;
 import validator.exception.OpenWeatherResponseException;
 import validator.exception.OpenWeatherUserKeyException;
+
 import java.net.SocketTimeoutException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -36,7 +37,7 @@ public class WeatherAPIService {
     private CloseableHttpClient closeableHttpClient;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public WeatherAPIService(CloseableHttpClient closeableHttpClient){
+    public WeatherAPIService(CloseableHttpClient closeableHttpClient) {
         this.closeableHttpClient = closeableHttpClient;
     }
 
@@ -50,37 +51,35 @@ public class WeatherAPIService {
             weatherDto.setWindDirection(getWindDirection(weatherDto));
             weatherDto.setCurrentTime(getCurrentTimeForLocation(weatherDto));
             return weatherDto;
-        } catch (SocketTimeoutException timeoutException){
-            throw  new OpenWeatherResponseException("Server timeout");
-        }
-        catch (Exception e){
+        } catch (SocketTimeoutException timeoutException) {
+            throw new OpenWeatherResponseException("Server timeout");
+        } catch (Exception e) {
             throw new OpenWeatherResponseException("Error requesting weather for location: " + locationsDto.getId());
         }
     }
 
     public List<LocationDto> getLocationsByName(String name) throws OpenWeatherResponseException {
 
-       try {
-           var httpGet = createWeatherRequest(name);
-           var execute = closeableHttpClient.execute(httpGet);
-           checkResponseCode(execute.getCode());
-           var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
-           return objectMapper.readValue(string, new TypeReference<List<LocationDto>>() {
-           });
-       } catch (SocketTimeoutException timeoutException){
-           throw  new OpenWeatherResponseException("Server timeout");
-       }
-       catch (Exception e){
-           throw new OpenWeatherResponseException("Request error for location with name : " + e.getMessage());
-       }
+        try {
+            var httpGet = createWeatherRequest(name);
+            var execute = closeableHttpClient.execute(httpGet);
+            checkResponseCode(execute.getCode());
+            var string = EntityUtils.toString(execute.getEntity(), StandardCharsets.UTF_8);
+            return objectMapper.readValue(string, new TypeReference<List<LocationDto>>() {
+            });
+        } catch (SocketTimeoutException timeoutException) {
+            throw new OpenWeatherResponseException("Server timeout");
+        } catch (Exception e) {
+            throw new OpenWeatherResponseException("Request error for location with name : " + e.getMessage());
+        }
     }
 
-    private void checkResponseCode(int code){
-        switch (code){
+    private void checkResponseCode(int code) {
+        switch (code) {
             case 401 -> throw new OpenWeatherUserKeyException("User key error");
             case 429 -> throw new OpenWeatherExceedingRequestsException("Number of requests exceeded");
             case 404 -> throw new OpenWeatherExceedingRequestsException("Invalid request format");
-            case 500,502,503,504 -> throw new OpenWeatherResponseException("OpenWeather server error");
+            case 500, 502, 503, 504 -> throw new OpenWeatherResponseException("OpenWeather server error");
         }
     }
 
@@ -95,6 +94,7 @@ public class WeatherAPIService {
 
         return httpGet;
     }
+
     private HttpGet createWeatherRequest(String name) {
         var requestConfig = RequestConfig.custom()
                 .setConnectTimeout(10, TimeUnit.SECONDS)
@@ -125,7 +125,7 @@ public class WeatherAPIService {
         } else return "северо-западный";
     }
 
-    private String getCurrentTimeForLocation(WeatherDto weatherDto){
+    private String getCurrentTimeForLocation(WeatherDto weatherDto) {
         var currentUTC = Instant.now();
         var currentWithOffset = currentUTC.plusSeconds(weatherDto.getTimezone());
         var zonedDateTime = ZonedDateTime.ofInstant(currentWithOffset, ZoneId.of("UTC"));

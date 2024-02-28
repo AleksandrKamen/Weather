@@ -8,6 +8,7 @@ import validator.Validator;
 
 public class RegistrationUserValidator implements Validator<UserDto> {
     private final UserRepository userRepository = new UserRepository();
+
     @Override
     public ValidationResult isValid(UserDto object) {
         var validationResult = new ValidationResult();
@@ -20,12 +21,12 @@ public class RegistrationUserValidator implements Validator<UserDto> {
             if (object.getLogin().contains(" ")) {
                 validationResult.add(Error.of(400, "Имя пользователя не должно содержать пробелы"));
             }
-            if (object.getLogin().length() < 3 || object.getLogin().length() >20) {
+            if (object.getLogin().length() < 3 || object.getLogin().length() > 20) {
                 validationResult.add(Error.of(400, "Имя пользователя должено содержать от 3 до 20 символов. " +
                         "Пожалуйста, введите имя соответствующее этому диапазону"));
             }
         }
-         if(userRepository.findByLoginWithSession(object.getLogin()).isPresent()) {
+        if (userRepository.findByLoginWithSession(object.getLogin()).isPresent()) {
             validationResult.add(Error.of(409, "Пользователь с данным именем уже существует"));
         }
 
@@ -45,7 +46,7 @@ public class RegistrationUserValidator implements Validator<UserDto> {
         if (object.getPassword().equals(object.getLogin())) {
             validationResult.add(Error.of(400, "Пароль не может совпадать с именем пользователя"));
         }
-        if (!object.getPassword().equals(object.getConfirmPassword())){
+        if (!object.getPassword().equals(object.getConfirmPassword())) {
             validationResult.add(Error.of(400, "Пароль и проверочный пароль не совпадают"));
         }
         return validationResult;

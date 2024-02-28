@@ -20,45 +20,54 @@
                         <h4 class="card-title text-center mb-5" th:text="${location.name}"></h4>
                         <div class="location-bottom-details">
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Температура воздуха: ' +  ${weather.getMain().get('temp')} + ' °C'"></span>
+                                <span class="me-2"
+                                      th:text="'Температура воздуха: ' +  ${weather.getMain().get('temp')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-temperature-three-quarters"></i></a>
                             </div>
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'По ощущению: ' +  ${weather.getMain().get('feels_like')} + ' °C'"></span>
+                                <span class="me-2"
+                                      th:text="'По ощущению: ' +  ${weather.getMain().get('feels_like')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-person"></i></a>
                             </div>
 
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Минимальная температура: ' +  ${weather.getMain().get('temp_min')} + ' °C'"></span>
+                                <span class="me-2"
+                                      th:text="'Минимальная температура: ' +  ${weather.getMain().get('temp_min')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-snowflake"></i></a>
                             </div>
 
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Максимальная температура: ' +  ${weather.getMain().get('temp_max')} + ' °C'"></span>
+                                <span class="me-2"
+                                      th:text="'Максимальная температура: ' +  ${weather.getMain().get('temp_max')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-fire"></i></a>
                             </div>
 
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Описание: ' + ${weather.getWeather()[0].get('description')}"></span>
+                                <span class="me-2"
+                                      th:text="'Описание: ' + ${weather.getWeather()[0].get('description')}"></span>
                                 <a><i class="fa-solid fa-book-open"></i></a>
                             </div>
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Влажность: ' + ${weather.getMain().get('humidity')} + '%'"></span>
+                                <span class="me-2"
+                                      th:text="'Влажность: ' + ${weather.getMain().get('humidity')} + '%'"></span>
                                 <a><i class="fa-solid fa-droplet"></i></a>
                             </div>
 
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Давление: ' + ${weather.getMain().get('pressure')} + ' гПа'"></span>
+                                <span class="me-2"
+                                      th:text="'Давление: ' + ${weather.getMain().get('pressure')} + ' гПа'"></span>
                                 <a><i class="fa-solid fa-weight-hanging"></i></a>
                             </div>
 
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2" th:text="'Ветер: ' + ${weather.getWind().get('speed')}+ ' м/с ' + ${weather.getWindDirection()}"></span>
+                                <span class="me-2"
+                                      th:text="'Ветер: ' + ${weather.getWind().get('speed')}+ ' м/с ' + ${weather.getWindDirection()}"></span>
                                 <a><i class="fa-solid fa-wind"></i></a>
                             </div>
                             <div th:if="${weather.getWind().get('gust')}" class="d-flex align-items-center mb-4">
-                               <span  class="me-2" th:text="'Порывы ветера до ' + ${weather.getWind().get('gust')}+ ' м/с '"></span>
-                               <a><i class="fa-solid fa-tornado"></i></a>
+                                <span class="me-2"
+                                      th:text="'Порывы ветера до ' + ${weather.getWind().get('gust')}+ ' м/с '"></span>
+                                <a><i class="fa-solid fa-tornado"></i></a>
                             </div>
                         </div>
                         <div class="location-card-button">

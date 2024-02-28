@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:insert="~{components/head :: #head}">
     <title>Home</title>
 </head>
@@ -23,31 +23,38 @@
                         </a>
                         <div class="location-bottom-details">
                             <div>
-                                <span class="me-2" th:text="'Страна: ' +  ${location.getWeatherDto().getSys().get('country')}"></span>
+                                <span class="me-2"
+                                      th:text="'Страна: ' +  ${location.getWeatherDto().getSys().get('country')}"></span>
                             </div>
-                             <div>
-                                <span class="me-2" th:text="'Температура воздуха: ' +  ${location.getWeatherDto().getMain().get('temp')} + ' °C'"></span>
+                            <div>
+                                <span class="me-2"
+                                      th:text="'Температура воздуха: ' +  ${location.getWeatherDto().getMain().get('temp')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-temperature-three-quarters"></i></a>
                             </div>
-                            <div >
-                                <span class="me-2" th:text="'По ощущению: ' +  ${location.getWeatherDto().getMain().get('feels_like')} + ' °C'"></span>
+                            <div>
+                                <span class="me-2"
+                                      th:text="'По ощущению: ' +  ${location.getWeatherDto().getMain().get('feels_like')} + ' °C'"></span>
                                 <a><i class="fa-solid fa-person"></i></a>
                             </div>
                             <div>
-                                <span class="me-2" th:text="'Описание: ' + ${location.getWeatherDto().getWeather()[0].get('description')}"></span>
+                                <span class="me-2"
+                                      th:text="'Описание: ' + ${location.getWeatherDto().getWeather()[0].get('description')}"></span>
                                 <a><i class="fa-solid fa-book-open"></i></a>
                             </div>
                             <div>
-                                <span class="me-2" th:text="'Влажность: ' + ${location.getWeatherDto().getMain().get('humidity')} + '%'"></span>
+                                <span class="me-2"
+                                      th:text="'Влажность: ' + ${location.getWeatherDto().getMain().get('humidity')} + '%'"></span>
                                 <a><i class="fa-solid fa-droplet"></i></a>
                             </div>
 
                             <div>
-                                <span class="me-2" th:text="'Давление: ' + ${location.getWeatherDto().getMain().get('pressure')} + ' гПа'"></span>
+                                <span class="me-2"
+                                      th:text="'Давление: ' + ${location.getWeatherDto().getMain().get('pressure')} + ' гПа'"></span>
                                 <a><i class="fa-solid fa-weight-hanging"></i></a>
                             </div>
                             <div class="d-flex align-items-center mb-4">
-                                <span class="me-2"th:text="'Ветер: ' + ${location.getWeatherDto().getWind().get('speed')}+ ' м/с ' + ${location.getWeatherDto().getWindDirection()}"></span>
+                                <span class="me-2"
+                                      th:text="'Ветер: ' + ${location.getWeatherDto().getWind().get('speed')}+ ' м/с ' + ${location.getWeatherDto().getWindDirection()}"></span>
                                 <a><i class="fa-solid fa-wind"></i></a>
                             </div>
 

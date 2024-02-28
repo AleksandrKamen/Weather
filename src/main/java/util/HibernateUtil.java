@@ -8,9 +8,11 @@ import org.hibernate.cfg.Configuration;
 @UtilityClass
 public class HibernateUtil {
     private SessionFactory sessionFactory;
+
     public Session getSession() {
         return getSessionFactory().getCurrentSession();
     }
+
     private SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             var configuration = buildConfiguration();

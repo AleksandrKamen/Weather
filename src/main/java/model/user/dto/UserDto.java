@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserDto {
-     String login;
-     String password;
-     String confirmPassword;
+    String login;
+    String password;
+    String confirmPassword;
 }
