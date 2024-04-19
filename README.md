@@ -2,7 +2,7 @@
 
 ![image](https://github.com/AleksandrKamen/Weather/assets/144233016/cd898e36-a788-4dac-9931-e85c1a2ab093)
 
-**Техническое задание проекта** -  [https://zhukovsd.github.io/java-backend-learning-course/Projects/TennisScoreboard/](https://zhukovsd.github.io/java-backend-learning-course/Projects/WeatherViewer/)
+**Техническое задание проекта** -  [https://zhukovsd.github.io/java-backend-learning-course/Projects/WeatherViewer/](https://zhukovsd.github.io/java-backend-learning-course/Projects/WeatherViewer/)
 
 **Суть проекта** - Веб-приложение для посмотра текущей погоды для заданной локации. Зарегистрированные пользователи могут добавить выбранные локации с текущей погодой на стартовую страницу,
 а также удалить локацию из избранных.    
